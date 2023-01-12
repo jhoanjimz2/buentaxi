@@ -1,0 +1,7 @@
+{
+  "name": "buentaxi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
