@@ -4,7 +4,7 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --ion-color-primary: #eb5d33;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -76,7 +76,7 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark-not) {
   /*
    * Dark Colors
    * -------------------------------------------
@@ -232,5 +232,67 @@
     --ion-tab-bar-background: #1f1f1f;
 
     --ion-card-background: #1e1e1e;
+  }
+}
+$colors: (
+	primary:    #FFF25C,
+	secondary:  #015a98,
+	verde:      #A0EDD9,
+	azul:       #015a98,
+	danger:     #ED5565, 
+	light:      #f4f4f4,
+	dark:       #000,
+	dorado:     #cba112
+);
+$curve: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+.contenedor-space {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+ion-header {
+  --background: var(--ion-color-primary);
+}
+ion-toolbar {
+  --background: var(--ion-color-primary);
+}
+.title{
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+ion-back-button {
+  --color: white;
+}
+ion-list {
+  width: 100%;
+}
+.items {
+    --inner-padding-bottom: 10px;
+    --inner-padding-start: 10px;
+    --inner-padding-top: 10px;
+    --inner-padding-end: 10px;
+    --detail-icon-color: var(--ion-color-primary);
+}
+ion-content {
+  --keyboard-offset: 0px !important;
+}
+.icons-about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg{
+      overflow: visible;
+      width: 60px;
+      height: 60px;
+  }
+}
+.icons-about{
+  height: auto;
+  img{
+    width: 250px;
   }
 }

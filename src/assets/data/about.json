@@ -1,0 +1,14 @@
+{
+    "descripcion": " Buen Taxi es una aplicación móvil que la Alcaldía Distrital de Santa Marta pone a disposición de la ciudadanía con el fin de ofrecer una herramienta que permita a samarios y turistas: ",
+    "items": [
+        {
+            "descripcion": "Acceder a la información del servicio público de taxis de la ciudad, validando en línea y en tiempo real la información de los conductores"
+        },
+        {
+            "descripcion": "Calificar el servicio prestado"
+        },
+        {
+            "descripcion": "Compartir en sus redes sociales los viajes realizados en taxi"
+        }
+    ]
+}

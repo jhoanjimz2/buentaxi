@@ -1,0 +1,25 @@
+.innlab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    .icon{
+        box-sizing: border-box;
+        height: 40px;
+        padding: 5px;
+        circle, .liquid{
+            fill: #343a47;
+        }
+        .lines path:not(.thread-border){
+            fill: none;
+            stroke: #343a47;
+            stroke-width: 14;
+            stroke-miterlimit:10;
+        }
+        .thread-border{
+            fill: #343a47;
+            stroke: #343a47;
+            stroke-width: 1px;
+        }
+    }
+}

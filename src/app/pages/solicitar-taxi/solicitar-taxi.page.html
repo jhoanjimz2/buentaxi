@@ -1,0 +1,34 @@
+<app-header-page titulo="Solicitar Taxi"></app-header-page>
+
+<ion-content>
+
+    <ion-segment value="0" (ionChange)="cambiar($event)" mode="md">
+        <ion-segment-button value="0">
+          <ion-label class="ion-text-capitalize">Aplicaciones</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="1">
+          <ion-label class="ion-text-capitalize">Telefonos</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+
+    <ion-slides #slider>
+        <ion-slide>
+            <ion-list mode="ios" lines="none">
+                <app-aplicacion 
+                    *ngFor="let aplicacion of aplicaciones"
+                    [aplicacion]="aplicacion">
+                </app-aplicacion>
+            </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <ion-list mode="ios" lines="none">
+                <app-telefono
+                    *ngFor="let telefono of telefonos"
+                    [telefono]="telefono">
+                </app-telefono>
+            </ion-list>
+        </ion-slide>
+    </ion-slides>
+
+</ion-content>

@@ -1,8 +1,10 @@
 {
-  "name": "buentaxi",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "name": "buen_taxi",
+  "version": "1.0.0",
+  "author": "InnLab",
+  "homepage": "http://corporacioninnlab.com/",
+  "email": "corporacioninnlab@gmail.com",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,7 +13,6 @@
     "test": "ng test",
     "lint": "ng lint"
   },
-  "private": true,
   "dependencies": {
     "@angular/common": "^15.0.0",
     "@angular/core": "^15.0.0",
@@ -19,12 +20,19 @@
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
+    "@capacitor/android": "4.6.1",
     "@capacitor/app": "4.1.1",
     "@capacitor/core": "4.6.1",
+    "@capacitor/geolocation": "^4.1.0",
     "@capacitor/haptics": "4.1.0",
+    "@capacitor/ios": "4.6.1",
     "@capacitor/keyboard": "4.1.0",
     "@capacitor/status-bar": "4.1.1",
+    "@ionic-native/call-number": "^5.36.0",
+    "@ionic-native/market": "^5.36.0",
     "@ionic/angular": "^6.1.9",
+    "call-number": "^1.0.1",
+    "cordova-plugin-market": "^1.2.0",
     "ionicons": "^6.0.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
@@ -61,5 +69,5 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.8.4"
   },
-  "description": "An Ionic project"
+  "description": "Es una aplicación que permite calificar el servicio público de taxis en la ciudad de Santa Marta."
 }

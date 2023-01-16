@@ -1,0 +1,21 @@
+.contenedor {
+    padding: 16px;
+}
+p {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 10px;
+}
+.seccion{
+    margin-top: 100px; 
+    &.calificar{
+        margin-top: 60px;
+    }
+    &.compartir{
+        margin-top: 50px;
+    }
+    &.info{
+        margin-top: 20px;
+    }
+}

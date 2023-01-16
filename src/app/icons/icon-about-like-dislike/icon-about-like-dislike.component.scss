@@ -1,0 +1,17 @@
+.he {
+    height: 100px !important;
+}
+.like{
+    stroke: #ED5565;
+    fill: #ED5565;
+    stroke-width: 1.2;
+}
+.dislike{
+    transform: scale(1.6);
+    fill: black;
+    .face-gradient{
+        fill: url(#faceGradient);
+        opacity: 1;
+        transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AboutService } from './services/about.service';
+import { SolicitarTaxiService } from './services/solicitar-taxi.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(
+    private solicitarTaxiService: SolicitarTaxiService,
+    private aboutService: AboutService
+  ) {
+    this.solicitarTaxiService.getAplicaciones();
+    this.solicitarTaxiService.getTelefonos();
+    this.aboutService.getAbout();
+  }
 }

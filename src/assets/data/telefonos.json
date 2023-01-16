@@ -1,0 +1,26 @@
+[
+    {
+        "nombre"  : "Easy Taxi",
+        "telefono": "3046381648" 
+    }, 
+    { 
+        "nombre"  : "Radio Taxi Santa Marta",
+        "telefono": "0354207000" 
+    }, 
+    { 
+        "nombre"  : "Taxxi 4209000 Satelital",
+        "telefono": "0354209000"
+    }, 
+    { 
+        "nombre"  : "Taxis Libres",
+        "telefono": "0354220384"
+    }, 
+    { 
+        "nombre"  : "Taxis la 17 S.A.S.",
+        "telefono": "0354224545"
+    },       
+    { 
+        "nombre"  : "Tax & Com",
+        "telefono": "0354232323"
+    }
+]

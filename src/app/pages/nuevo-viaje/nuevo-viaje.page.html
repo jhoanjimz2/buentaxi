@@ -1,0 +1,19 @@
+<app-header-tab titulo="Nuevo Viaje"></app-header-tab>
+
+<ion-content>
+	<div class="contenedor-space">
+		<img class="logo" src="assets/logo.svg">
+		<form>
+			<h4>Nuevo viaje</h4>
+			<span>Ingresa la placa del taxi</span>
+			<input  
+                placeholder="XXX000" 
+                maxlength="6"  
+                autocomplete="off"
+            />
+			<ion-button mode="ios" (click)="validar()">Validar</ion-button>
+		</form>
+		<img class="logo-sm" src="assets/logo_sm.png">
+	</div>
+</ion-content>
+

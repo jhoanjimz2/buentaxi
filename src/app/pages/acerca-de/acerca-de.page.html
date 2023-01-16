@@ -1,0 +1,26 @@
+<app-header-page titulo="Acerca de"></app-header-page>
+
+<ion-content>
+
+    <div class="contenedor"C>
+        <p>{{ about.descripcion }}</p>
+
+        <div class="seccion info">
+            <app-icon-about-info></app-icon-about-info>
+            <p>1) {{ about.items[0].descripcion }}</p>
+        </div>
+
+        <div class="seccion calificar">
+            <app-icon-about-like-dislike></app-icon-about-like-dislike>
+            <p>2) {{ about.items[1].descripcion }}</p>
+        </div>
+
+        <div class="seccion compartir">
+            <app-icon-about-shared></app-icon-about-shared>
+            <p>3) {{ about.items[2].descripcion }}</p>
+        </div>
+
+        <app-icon-about-innlab></app-icon-about-innlab>
+    </div>
+
+</ion-content>
