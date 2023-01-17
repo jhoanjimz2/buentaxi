@@ -8,6 +8,7 @@ import { NuevoViajePageRoutingModule } from './nuevo-viaje-routing.module';
 
 import { NuevoViajePage } from './nuevo-viaje.page';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { PipesModule } from 'src/app/pipes/pipes.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     FormsModule,
     IonicModule,
     NuevoViajePageRoutingModule,
-    SharedModule
+    SharedModule,
+    PipesModule
   ],
   declarations: [NuevoViajePage],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

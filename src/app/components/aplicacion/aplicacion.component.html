@@ -1,6 +1,6 @@
 <ion-item class="items" button (click)="goApp()">
   <ion-thumbnail slot="start">
-    <img [alt]="aplicacion.img" [src]="aplicacion.img" />
+    <img [alt]="aplicacion.img" [src]="aplicacion.img | imagenes" />
   </ion-thumbnail>
   <ion-label>{{aplicacion.name}}</ion-label>  
 </ion-item>

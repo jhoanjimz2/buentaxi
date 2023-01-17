@@ -4,6 +4,7 @@ import { IconAboutInfoComponent } from './icon-about-info/icon-about-info.compon
 import { IconAboutLikeDislikeComponent } from './icon-about-like-dislike/icon-about-like-dislike.component';
 import { IconAboutSharedComponent } from './icon-about-shared/icon-about-shared.component';
 import { IconAboutInnlabComponent } from './icon-about-innlab/icon-about-innlab.component';
+import { PipesModule } from '../pipes/pipes.module';
 
 
 
@@ -21,7 +22,8 @@ import { IconAboutInnlabComponent } from './icon-about-innlab/icon-about-innlab.
     IconAboutInnlabComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PipesModule
   ]
 })
 export class IconsModule { }

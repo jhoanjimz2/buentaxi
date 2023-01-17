@@ -1,9 +1,11 @@
 export class FormCotizar {
-    origen :   string;
-    destino:   string;
+    origen  : string;
+    destino : string;
+    estimado: number;
     
     constructor() {
-        this.origen  = 'Originario';
-        this.destino = 'Destinario';
+        this.origen   = '';
+        this.destino  = '';
+        this.estimado = 0;
     }
 }

@@ -6,6 +6,8 @@ import { IonicModule } from '@ionic/angular';
 import { FormCotizarComponent } from './form-cotizar/form-cotizar.component';
 import { MapaCotizarComponent } from './mapa-cotizar/mapa-cotizar.component';
 import { FormsModule } from '@angular/forms';
+import { PipesModule } from '../pipes/pipes.module';
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 
 
 
@@ -25,7 +27,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     IonicModule,
-    FormsModule
+    FormsModule,
+    PipesModule,
+    GooglePlaceModule
   ]
 })
 export class ComponentsModule { }

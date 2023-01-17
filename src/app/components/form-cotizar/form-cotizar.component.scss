@@ -1,0 +1,29 @@
+.button-arrow {
+  --background-activated: var(--ion-color-primary);
+}
+#icon-arrow {
+  transform: rotate(0deg);
+	transition: transform .8s;
+}
+#form {
+  width: 100%;
+	height: 0px;
+  background-color: white;
+  padding: 0px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+	transition: height .8s;
+}
+.p-20 {
+  padding: 20px;
+}
+input {
+  border: 1px solid #fff;
+  width: 100%;
+  background-color: #fff;
+  font-size: 20px;
+  color: #000;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

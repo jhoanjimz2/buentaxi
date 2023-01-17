@@ -12,6 +12,7 @@ export class AjustesPage {
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetCtrl.create({
+      mode: 'ios',
       cssClass: 'my-custom-class',
       buttons: [
         {

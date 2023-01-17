@@ -16,8 +16,7 @@ export class NuevoViajeService  extends ConexionService {
 
 
   public verificarPlaca(placa: string){
-    let data = { placa }
-    return this.consultaPOST('/api/searchVehiculoByPlacaConductores', data);
+    return this.consultaPOST('/api/searchVehiculoByPlacaConductores', placa);
   }
   public getParametros(){
     return this.consultaGET('/api/getParametros');
