@@ -8,6 +8,9 @@ import { MapaCotizarComponent } from './mapa-cotizar/mapa-cotizar.component';
 import { FormsModule } from '@angular/forms';
 import { PipesModule } from '../pipes/pipes.module';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { CalificarGustoComponent } from './calificar-gusto/calificar-gusto.component';
+import { CalificarNoGustoComponent } from './calificar-no-gusto/calificar-no-gusto.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -16,20 +19,25 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     TelefonoComponent,
     AplicacionComponent,
     FormCotizarComponent,
-    MapaCotizarComponent
+    MapaCotizarComponent,
+    CalificarGustoComponent,
+    CalificarNoGustoComponent
   ],
   exports: [
     TelefonoComponent,
     AplicacionComponent,
     FormCotizarComponent,
-    MapaCotizarComponent
+    MapaCotizarComponent,
+    CalificarGustoComponent,
+    CalificarNoGustoComponent
   ],
   imports: [
     CommonModule,
     IonicModule,
     FormsModule,
     PipesModule,
-    GooglePlaceModule
+    GooglePlaceModule,
+    SharedModule
   ]
 })
 export class ComponentsModule { }

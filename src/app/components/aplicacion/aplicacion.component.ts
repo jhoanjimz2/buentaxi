@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Aplicacion } from 'src/app/interfaces/aplicacion.interface';
-import { Market } from '@ionic-native/market/ngx';
 
 
 @Component({
@@ -8,18 +7,13 @@ import { Market } from '@ionic-native/market/ngx';
   templateUrl: './aplicacion.component.html',
   styleUrls: ['./aplicacion.component.scss'],
 })
-export class AplicacionComponent implements OnInit {
+export class AplicacionComponent {
   
   @Input() aplicacion!: Aplicacion;
 
-  constructor(
-    private market: Market
-  ) { }
-
-  ngOnInit() {}
+  constructor() { }
 
   goApp() {
-    this.market.open(this.aplicacion.url);
   }
 
 }

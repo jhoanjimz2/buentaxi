@@ -44,7 +44,7 @@ export class FormCotizarComponent {
   
   show() { 
     if(this.click==1) {
-      document.getElementById("form")!.style.height = "202px";
+      document.getElementById("form")!.style.height = "182px";
       document.getElementById("icon-arrow")!.style.transform = "rotate(180deg)";
       this.click = this.click + 1;
     } else{

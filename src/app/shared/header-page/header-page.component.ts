@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class HeaderPageComponent {
   @Input() titulo: String = '';
+  @Input() rutaDefaultBack: String = '/pages/tabs/ajustes';
+  @Input() slot: String = 'start';
 }

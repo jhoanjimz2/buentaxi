@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { NuevoViajeService } from 'src/app/services/nuevo-viaje.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { NuevoViajeService } from 'src/app/services/nuevo-viaje.service';
 export class NuevoViajePage implements OnInit {
 
   constructor(
-    private nuevoViajeService: NuevoViajeService
+    private nuevoViajeService: NuevoViajeService,
+    private navController: NavController,
   ) { }
 
   ngOnInit() {
@@ -19,9 +21,10 @@ export class NuevoViajePage implements OnInit {
   }
 
   validar() {
-    this.nuevoViajeService.verificarPlaca('UQS000').subscribe(data => {
-      console.log(data);
-    });
+    this.navController.navigateForward('/pages/perfil-conductor');
+    // this.nuevoViajeService.verificarPlaca('TZW393').subscribe(data => {
+    //   console.log(data);
+    // });
   }
 
 }

@@ -1,0 +1,24 @@
+<ion-header mode="md" class="background-color-header">
+
+  <ion-toolbar class="background-color-header">
+
+    <app-click-header slot="start"></app-click-header>
+
+    <ion-title class="text-white" slot="start">
+      {{title}}
+      <p class="subtitle">{{subTitle}}</p>
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button
+        class="text-white"
+        mode="ios" 
+        (click)="cancel()" 
+        [strong]="true">
+        {{btnTextCancel}}
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+</ion-header>

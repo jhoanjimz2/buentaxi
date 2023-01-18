@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Telefono } from 'src/app/interfaces/telefono.interface';
-import { CallNumber } from '@ionic-native/call-number/ngx';
 
 @Component({
   selector: 'app-telefono',
@@ -11,12 +10,9 @@ export class TelefonoComponent {
 
   @Input() telefono!: Telefono;
 
-  constructor(private callNumber: CallNumber) { }
+  constructor() { }
 
   llamar() {
-    this.callNumber.callNumber(this.telefono.telefono, true)
-      .then(res => console.log('Launched dialer!', res))
-      .catch(err => console.log('Error launching dialer', err));
   }
 
 }

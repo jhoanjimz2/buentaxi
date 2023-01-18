@@ -23,28 +23,11 @@ export class ConexionService {
   
   consultaPOST(ruta: string, data: any) {
     var myHeaders = new HttpHeaders();
-    return this.conexionHTTP.post(`${environment.api}${ruta}`, this.formData(data), { headers: myHeaders }).pipe(
+    return this.conexionHTTP.post(`${environment.api}${ruta}`, data, { headers: myHeaders }).pipe(
       map((data) => {
         return data;
       })
     );
-  }
-  
-  formData(object: any, metodoput = false) {
-    const formData = new FormData();
-    Object.keys(object).forEach((key) => {
-      if (Array.isArray(object[key])) {
-        object[key].forEach(function (data: any, index: number) {
-          if (data) formData.append(key + "[" + index + "]", data);
-        });
-      } else {
-        if (object[key]) formData.append(key, object[key]);
-      }
-    });
-    if (metodoput) {
-      formData.append("_method", "PUT");
-    }
-    return formData;
   }
 
 

@@ -253,10 +253,7 @@ $curve: cubic-bezier(0.4, 0.0, 0.2, 1);
   justify-content: space-around;
   height: 100%;
 }
-ion-header {
-  --background: var(--ion-color-primary);
-}
-ion-toolbar {
+.background-color-header {
   --background: var(--ion-color-primary);
 }
 .title{
@@ -295,4 +292,7 @@ ion-content {
   img{
     width: 250px;
   }
+}
+.item.sc-ion-label-md-h, .item .sc-ion-label-md-h {
+  white-space: break-spaces !important;
 }

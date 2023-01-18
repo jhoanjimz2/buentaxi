@@ -1,0 +1,80 @@
+.contenedor {
+    width: 100%;
+    height: auto;
+    padding: 40px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.d-text {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.label-one {
+    font-size: 30px;
+    font-weight: 400;
+    color: black;
+}
+.label-two {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+}
+.con-permiso {
+    margin-top: 10px;
+    width: 270px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #9feeda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 5px 5px #00000020;
+    ion-icon {
+        margin-left: 10px;
+        color: #fff;
+        font-size: 30px;
+    }
+}
+.opciones {
+    width: 270px;
+    display: flex;
+    margin-top: 30px;
+}
+.w-4 {
+    flex: 0 0 calc(calc(4 / var(--ion-grid-columns, 12)) * 100%);
+    width: calc(calc(4 / var(--ion-grid-columns, 12)) * 100%);
+    max-width: calc(calc(4 / var(--ion-grid-columns, 12)) * 100%);
+}
+.centrar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icon {
+    background-color: var(--ion-color-primary);
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 25px;
+    margin-bottom: 5px;
+    color: white;
+}
+.label-opcion {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+}

@@ -5,6 +5,7 @@ import { IconAboutLikeDislikeComponent } from './icon-about-like-dislike/icon-ab
 import { IconAboutSharedComponent } from './icon-about-shared/icon-about-shared.component';
 import { IconAboutInnlabComponent } from './icon-about-innlab/icon-about-innlab.component';
 import { PipesModule } from '../pipes/pipes.module';
+import { ClickHeaderComponent } from './click-header/click-header.component';
 
 
 
@@ -13,13 +14,15 @@ import { PipesModule } from '../pipes/pipes.module';
     IconAboutInfoComponent,
     IconAboutLikeDislikeComponent,
     IconAboutSharedComponent,
-    IconAboutInnlabComponent
+    IconAboutInnlabComponent,
+    ClickHeaderComponent
   ],
   exports: [
     IconAboutInfoComponent,
     IconAboutLikeDislikeComponent,
     IconAboutSharedComponent,
-    IconAboutInnlabComponent
+    IconAboutInnlabComponent,
+    ClickHeaderComponent
   ],
   imports: [
     CommonModule,

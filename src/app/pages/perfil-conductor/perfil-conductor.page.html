@@ -1,0 +1,48 @@
+<app-header-page 
+  [titulo]="'UQQ-000'"
+  [rutaDefaultBack]="'/pages/tabs/nuevo-viaje'"
+  [slot]="'end'">
+</app-header-page>
+
+<ion-content>
+
+  <div class="contenedor-space">
+    <div class="contenedor">
+
+      <div class="img">
+        <img [src]="'' | imagenes">
+      </div>
+
+      <div class="d-text">
+        <ion-label class="label-one">Nombre: Jhoan</ion-label>
+        <ion-label class="label-one">Apellido: Jimenez</ion-label>
+        <ion-label class="label-two">Taxis 1a S.A.S.</ion-label>
+      </div>
+
+      <div class="con-permiso">
+        Con permiso para operar
+        <ion-icon name="checkmark-circle"></ion-icon>
+      </div>
+
+      <div class="opciones">
+        <div class="w-4 centrar">
+          <ion-icon name="heart" class="icon" id="open-modal-gusto"></ion-icon>
+          <ion-label class="label-opcion">Gustó</ion-label>
+        </div>
+        <div class="w-4 centrar">
+          <ion-icon name="thumbs-down" class="icon" id="open-modal-no-gusto"></ion-icon>
+          <ion-label class="label-opcion">No gustó</ion-label>
+        </div>
+        <div class="w-4 centrar">
+          <ion-icon name="share-social" class="icon"></ion-icon>
+          <ion-label class="label-opcion">Compartir</ion-label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <app-calificar-gusto></app-calificar-gusto>
+  <app-calificar-no-gusto></app-calificar-no-gusto>
+
+</ion-content>

@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./acerca-de/acerca-de.module').then(m => m.AcercaDePageModule)
   },
   {
+    path: 'perfil-conductor',
+    loadChildren: () => import('./perfil-conductor/perfil-conductor.module').then( m => m.PerfilConductorPageModule)
+  },
+  {
     path: '',
     redirectTo: 'tabs',
     pathMatch: 'full'
