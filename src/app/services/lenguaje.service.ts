@@ -26,6 +26,5 @@ export class LenguajeService {
   selecionarIdioma(len: string) {
     this.translate.use(len);
     localStorage.setItem('lenguaje', len);
-    console.log('entro');
   }
 }
