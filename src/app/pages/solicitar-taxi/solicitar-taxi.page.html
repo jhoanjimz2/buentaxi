@@ -1,13 +1,13 @@
-<app-header-page titulo="Solicitar Taxi"></app-header-page>
+<app-header-page [titulo]="'SOLICITARTAXI' | translate"></app-header-page>
 
 <ion-content>
 
     <ion-segment value="0" (ionChange)="cambiar($event)" mode="md">
         <ion-segment-button value="0">
-          <ion-label class="ion-text-capitalize">Aplicaciones</ion-label>
+          <ion-label class="ion-text-capitalize">{{ 'APLICACIONES' | translate }}</ion-label>
         </ion-segment-button>
         <ion-segment-button value="1">
-          <ion-label class="ion-text-capitalize">Telefonos</ion-label>
+          <ion-label class="ion-text-capitalize">{{ 'TELEFONOS' | translate }}</ion-label>
         </ion-segment-button>
     </ion-segment>
 

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormCotizar } from 'src/app/interfaces/formularios.interface';
 import { Address } from 'ngx-google-places-autocomplete/objects/address';
 declare var google: any;
@@ -9,6 +9,7 @@ declare var google: any;
   styleUrls: ['./form-cotizar.component.scss'],
 })
 export class FormCotizarComponent {
+  @Output() btnConfirm: EventEmitter<any> = new EventEmitter();
 
   @Input() mapa: any;
   formCotizar : FormCotizar = new FormCotizar();

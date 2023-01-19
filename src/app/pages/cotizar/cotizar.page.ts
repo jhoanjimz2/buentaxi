@@ -5,11 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cotizar.page.html',
   styleUrls: ['./cotizar.page.scss'],
 })
-export class CotizarPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class CotizarPage {
+  
 }

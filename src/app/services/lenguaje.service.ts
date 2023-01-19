@@ -23,4 +23,9 @@ export class LenguajeService {
       localStorage.setItem('lenguaje', 'es');
     }
   }
+  selecionarIdioma(len: string) {
+    this.translate.use(len);
+    localStorage.setItem('lenguaje', len);
+    console.log('entro');
+  }
 }

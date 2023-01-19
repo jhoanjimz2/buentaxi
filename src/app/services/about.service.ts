@@ -1,14 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { About } from '../interfaces/item-about.interface';
+import { About, AboutResponse } from '../interfaces/item-about.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AboutService {
-
-
   private _about!: About;
   public get about(): About {
     return this._about;
@@ -22,8 +20,12 @@ export class AboutService {
   ) {}
 
   public getAbout() {
-    return this.http.get<About>(`${environment.apiLocal}about.json`).subscribe((data: About) => {
-      this.about = data;
+    return this.http.get<AboutResponse>(`${environment.apiLocal}about.json`).subscribe((data: AboutResponse) => {
+      if (localStorage.getItem('lenguaje') == 'en') {
+        this.about = data.en;
+      } else {
+        this.about = data.es;
+      }
     });
   } 
 }

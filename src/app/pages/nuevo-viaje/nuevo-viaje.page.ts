@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { NuevoViajeService } from 'src/app/services/nuevo-viaje.service';
 
@@ -7,18 +7,12 @@ import { NuevoViajeService } from 'src/app/services/nuevo-viaje.service';
   templateUrl: './nuevo-viaje.page.html',
   styleUrls: ['./nuevo-viaje.page.scss'],
 })
-export class NuevoViajePage implements OnInit {
+export class NuevoViajePage {
 
   constructor(
     private nuevoViajeService: NuevoViajeService,
     private navController: NavController,
   ) { }
-
-  ngOnInit() {
-    this.nuevoViajeService.getParametros().subscribe(data => {
-      console.log(data);
-    })
-  }
 
   validar() {
     this.navController.navigateForward('/pages/perfil-conductor');

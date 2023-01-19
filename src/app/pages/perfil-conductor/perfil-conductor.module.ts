@@ -9,7 +9,9 @@ import { PerfilConductorPageRoutingModule } from './perfil-conductor-routing.mod
 import { PerfilConductorPage } from './perfil-conductor.page';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { PipesModule } from 'src/app/pipes/pipes.module';
-import { ComponentsModule } from 'src/app/components/components.module';
+import { IconsModule } from 'src/app/icons/icons.module';
+import { ModalsModule } from 'src/app/modals/modals.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -19,7 +21,9 @@ import { ComponentsModule } from 'src/app/components/components.module';
     PerfilConductorPageRoutingModule,
     SharedModule,
     PipesModule,
-    ComponentsModule
+    IconsModule,
+    ModalsModule,
+    TranslateModule
   ],
   declarations: [PerfilConductorPage],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

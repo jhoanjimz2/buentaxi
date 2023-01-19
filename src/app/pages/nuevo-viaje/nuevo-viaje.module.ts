@@ -9,6 +9,8 @@ import { NuevoViajePageRoutingModule } from './nuevo-viaje-routing.module';
 import { NuevoViajePage } from './nuevo-viaje.page';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { PipesModule } from 'src/app/pipes/pipes.module';
+import { FormulariosModule } from 'src/app/forms/formularios.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -17,7 +19,9 @@ import { PipesModule } from 'src/app/pipes/pipes.module';
     IonicModule,
     NuevoViajePageRoutingModule,
     SharedModule,
-    PipesModule
+    PipesModule,
+    FormulariosModule,
+    TranslateModule
   ],
   declarations: [NuevoViajePage],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

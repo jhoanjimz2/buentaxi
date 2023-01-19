@@ -10,7 +10,7 @@
       [(ngModel)]="formCotizar.origen" 
       name="origen"
       class="input_formulario" 
-      placeholder="Origen"
+      [placeholder]="'ORIGEN' | translate"
       #placesRef="ngx-places" 
       (onAddressChange)="origenAddress($event)"
       ngx-google-places-autocomplete/>
@@ -19,14 +19,14 @@
       [(ngModel)]="formCotizar.destino" 
       name="destino"
       class="input_formulario" 
-      placeholder="Destino"
+      [placeholder]="'DESTINO' | translate"
       #placesRef="ngx-places" 
       (onAddressChange)="destinoAddress($event)"
       ngx-google-places-autocomplete/>
 
     <input 
       type="number" 
-      placeholder="Estimado" 
+      [placeholder]="'ESTIMADO' | translate" 
       [(ngModel)]="formCotizar.estimado" 
       name="estimado" 
       disabled/>

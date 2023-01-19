@@ -1,3 +1,72 @@
 {
-    
+    "1-----": "-------------------COMPONENTES------------------",
+
+
+
+
+
+    "2-----": "-------------------FORMULARIOS------------------",
+    "PLACEHOLDEREMAIL":"Ingresa tu correo electrónico",
+    "PLACEHOLDERNOMBRE":"Ingresa tu nombre",
+    "PLACEHOLDERTELEFONO":"Ingresa tu teléfono",
+    "CALIFICAR":"Calificar",
+    "ORIGEN":"Origen",
+    "DESTINO":"Destino",
+    "ESTIMADO":"Estimado",
+    "NUEVOVIAJE":"Nuevo viaje",
+    "INGRESALAPLACADELTAXI":"Ingresa la placa del taxi",
+    "VALIDAR":"Validar",
+
+
+
+
+
+    "3-----": "-------------------MODALS------------------",
+    "CALIFICAR2":"Calificar",
+    "QUETEGUSTO":"¿Qué te gustó?",
+    "CANCELAR":"Cancelar",
+    "QUEPROBLEMASSEPRESENTARON":"¿Qué problemas se presentaron?",
+
+
+
+
+
+    "4-----": "-------------------PAGES------------------",
+    "ACERCADE":"Acerca de",
+    "INGLES":"Ingles",
+    "ESPAÑOL":"Español",
+    "CANCELAR2":"Cancelar",
+    "AJUSTES":"Ajustes",
+    "IDIOMA":"Idioma",
+    "SOLICITAR":"Solicitar",
+    "COTIZAR":"Cotizar",
+    "NUEVOVIAJE2":"Nuevo Viaje",
+    "NOMBRE":"Nombre",
+    "APELLIDO":"Apellido",
+    "CONPERMISOPARAOPERAR":"Con permiso para operar",
+    "GUSTO":"Gustó",
+    "NOGUSTO":"No gustó",
+    "COMPARTIR":"Compartir",
+    "SOLICITARTAXI":"Solicitar Taxi",
+    "APLICACIONES":"Aplicaciones",
+    "TELEFONOS":"Telefonos",
+
+
+
+
+
+    "5-----": "-------------------MENSAJE COMPARTIR------------------",
+    "VOYENELTAXI":"Voy en el taxi",
+    "AFILIADOA":"afiliado a",
+    "CONDUCTOR":"Conductor",
+    "UNSERVICIOOFRECIDO":"Un servicio ofrecido por Buen Taxi. Secretaría de Movilidad. Santa Marta está Cambiando. by Innlab"
+
+
+
+
+
+
+
+
+
 }

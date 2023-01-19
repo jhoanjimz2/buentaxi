@@ -1,0 +1,11 @@
+.border-gradient {
+    border: solid;
+    border-image-slice: 1;
+    border-width: 1.5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.border-gradient-primary {
+    border-image-source: linear-gradient(to left, #fff , var(--ion-color-primary), var(--ion-color-primary), #fff);
+}

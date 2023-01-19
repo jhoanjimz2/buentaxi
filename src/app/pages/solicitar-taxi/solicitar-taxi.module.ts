@@ -9,6 +9,7 @@ import { SolicitarTaxiPageRoutingModule } from './solicitar-taxi-routing.module'
 import { SolicitarTaxiPage } from './solicitar-taxi.page';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { ComponentsModule } from 'src/app/components/components.module';
     IonicModule,
     SolicitarTaxiPageRoutingModule,
     SharedModule,
-    ComponentsModule
+    ComponentsModule,
+    TranslateModule
   ],
   declarations: [SolicitarTaxiPage],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

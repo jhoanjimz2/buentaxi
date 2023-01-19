@@ -9,6 +9,7 @@ import { AcercaDePageRoutingModule } from './acerca-de-routing.module';
 import { AcercaDePage } from './acerca-de.page';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { IconsModule } from 'src/app/icons/icons.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { IconsModule } from 'src/app/icons/icons.module';
     IonicModule,
     AcercaDePageRoutingModule,
     SharedModule,
-    IconsModule
+    IconsModule,
+    TranslateModule
   ],
   declarations: [AcercaDePage],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

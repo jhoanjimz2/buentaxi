@@ -1,3 +1,72 @@
 {
-    
+    "1-----": "-------------------COMPONENTES------------------",
+
+
+
+
+
+    "2-----": "-------------------FORMULARIOS------------------",
+    "PLACEHOLDEREMAIL": "Enter your email address",
+    "PLACEHOLDERNOMBRE": "Enter your name",
+    "PLACEHOLDERTELEFONO": "Enter your phone number",
+    "CALIFICAR": "Qualify",
+    "ORIGEN": "Origin",
+    "DESTINO": "Destination",
+    "ESTIMADO": "Estimated",
+    "NUEVOVIAJE": "New trip",
+    "INGRESALAPLACADELTAXI": "Enter the cab plate",
+    "VALIDAR": "Validate",
+
+
+
+
+
+    "3-----": "-------------------MODALS------------------",
+    "CALIFICAR2": "Qualify",
+    "QUETEGUSTO": "What did you like?",
+    "CANCELAR": "Cancel",
+    "QUEPROBLEMASSEPRESENTARON": "What problems were encountered?",
+
+
+
+
+
+    "4-----": "-------------------PAGES------------------",
+    "ACERCADE": "About",
+    "INGLES": "English",
+    "ESPAÑOL": "Spanish",
+    "CANCELAR2": "Cancel",
+    "AJUSTES": "Settings",
+    "IDIOMA": "Language",
+    "SOLICITAR": "Request", 
+    "COTIZAR": "Quotizar", 
+    "NUEVOVIAJE2": "New Trip", 
+    "NOMBRE": "First name",
+    "APELLIDO": "Surname",
+    "CONPERMISOPARAOPERAR": "With permission to operate",
+    "GUSTO": "Liked",
+    "NOGUSTO": "Did not like",
+    "COMPARTIR": "Share",
+    "SOLICITARTAXI": "Request Taxi",
+    "APLICACIONES": "Applications",
+    "TELEFONOS": "Telephones",
+
+
+
+
+
+    "5-----": "-------------------MENSAJE COMPARTIR------------------",
+    "VOYENELTAXI":"I'm in the cab",
+    "AFILIADOA":"affiliated to",
+    "CONDUCTOR":"Driver",
+    "UNSERVICIOOFRECIDO":"A service offered by Buen Taxi. Secretariat of Mobility. Santa Marta is Changing. by Innlab"
+
+
+
+
+
+
+
+
+
 }

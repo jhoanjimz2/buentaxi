@@ -1,20 +1,42 @@
 {
-    "gusto": [
-        { "id":"1", "descripcion":"Buen taxi" },
-        { "id":"2", "descripcion":"Taxi aseado" },
-        { "id":"3", "descripcion":"Conductor que conoce la ciudad" },
-        { "id":"4", "descripcion":"Conductor amable" },
-        { "id":"5", "descripcion":"Servicio rápido y oportuno" },
-        { "id":"6", "descripcion":"Servicio seguro y flexible a la necesidad" }
-    ],
-    "nogusto": [
-        { "id":"1", "descripcion":"Se negó a cobrar la tarifa sugerida por el taximetro" },
-        { "id":"2", "descripcion":"No utilizó el taximetro" },
-        { "id":"3", "descripcion":"Cobro de tarifa exagerada" },
-        { "id":"4", "descripcion":"Negativa de prestación del servicio" },
-        { "id":"5", "descripcion":"Vehículo en mal estado" },
-        { "id":"6", "descripcion":"Agresión verbal" },
-        { "id":"7", "descripcion":"Agresión fisica" },
-        { "id":"8", "descripcion":"Conductor hablando por celular" }
-    ]
+    "es": {
+        "gusto": [
+            { "id":"1", "descripcion":"Buen taxi" },
+            { "id":"2", "descripcion":"Taxi aseado" },
+            { "id":"3", "descripcion":"Conductor que conoce la ciudad" },
+            { "id":"4", "descripcion":"Conductor amable" },
+            { "id":"5", "descripcion":"Servicio rápido y oportuno" },
+            { "id":"6", "descripcion":"Servicio seguro y flexible a la necesidad" }
+        ],
+        "nogusto": [
+            { "id":"1", "descripcion":"Se negó a cobrar la tarifa sugerida por el taximetro" },
+            { "id":"2", "descripcion":"No utilizó el taximetro" },
+            { "id":"3", "descripcion":"Cobro de tarifa exagerada" },
+            { "id":"4", "descripcion":"Negativa de prestación del servicio" },
+            { "id":"5", "descripcion":"Vehículo en mal estado" },
+            { "id":"6", "descripcion":"Agresión verbal" },
+            { "id":"7", "descripcion":"Agresión fisica" },
+            { "id":"8", "descripcion":"Conductor hablando por celular" }
+        ]
+    },
+    "en": {
+        "gusto": [
+            { "id":"1", "descripcion":"Good Taxi" },
+            { "id":"2", "descripcion":"Neat Taxi" },
+            { "id":"3", "descripcion":"Driver who knows the city" },
+            { "id":"4", "descripcion":"Friendly driver" },
+            { "id":"5", "descripcion":"Fast and timely service" },
+            { "id":"6", "descripcion":"Secure and flexible service as required" }
+        ],
+        "nogusto": [
+            { "id":"1", "descripcion":"Refused to charge the fare suggested by the taximeter" },
+            { "id":"2", "descripcion":"Did not use the taximeter" },
+            { "id":"3", "descripcion":"Excessive fees charged" },
+            { "id":"4", "descripcion":"Refusal to provide service" },
+            { "id":"5", "descripcion":"Vehicle in bad condition" },
+            { "id":"6", "descripcion":"Verbal aggression" },
+            { "id":"7", "descripcion":"Physical aggression" },
+            { "id":"8", "descripcion":"Driver talking on cell phone" }
+        ]
+    }
 }

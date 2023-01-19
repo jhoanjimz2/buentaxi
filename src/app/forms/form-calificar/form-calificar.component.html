@@ -1,0 +1,28 @@
+<form>
+
+  <ion-input
+    mode="ios"
+    type="email"
+    [placeholder]="'PLACEHOLDEREMAIL' | translate">
+  </ion-input>
+
+  <ion-input
+    mode="ios"
+    type="text"
+    [placeholder]="'PLACEHOLDERNOMBRE' | translate">
+  </ion-input>
+
+  <ion-input
+    mode="ios"
+    type="number"
+    [placeholder]="'PLACEHOLDERTELEFONO' | translate">
+  </ion-input>
+
+  <ion-button
+    (click)="confirm()"
+    [strong]="true"
+    mode="ios">
+    {{ 'CALIFICAR' | translate }}
+  </ion-button>
+
+</form>

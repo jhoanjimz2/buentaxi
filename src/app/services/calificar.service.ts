@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { OpcionCalificar, respOpCal } from '../interfaces/calificar.interface';
+import { NewsResponse, OpcionCalificar } from '../interfaces/calificar.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -29,9 +29,14 @@ export class CalificarService {
   ) {}
 
   public getOpcionesCalificar() {
-    return this.http.get<respOpCal>(`${environment.apiLocal}calificar.json`).subscribe(({ gusto, nogusto }: respOpCal) => {
-      this.gusto = gusto;
-      this.nogusto = nogusto;
+    return this.http.get<NewsResponse>(`${environment.apiLocal}calificar.json`).subscribe((data: NewsResponse) => {
+      if (localStorage.getItem('lenguaje') == 'en') {
+        this.gusto = data.en.gusto;
+        this.nogusto = data.en.nogusto;
+      } else {
+        this.gusto = data.es.gusto;
+        this.nogusto = data.es.nogusto;
+      }
     });
   } 
 

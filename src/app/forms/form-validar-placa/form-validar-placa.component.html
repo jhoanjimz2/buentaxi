@@ -1,0 +1,10 @@
+<form>
+  <h4>{{ 'NUEVOVIAJE' | translate }}</h4>
+  <span>{{ 'INGRESALAPLACADELTAXI' | translate}}</span>
+  <input  
+            [placeholder]="'XXX000'" 
+            maxlength="6"  
+            autocomplete="off"
+        />
+  <ion-button mode="ios" (click)="validar()">{{ 'VALIDAR' | translate }}</ion-button>
+</form>

@@ -10,6 +10,7 @@
     width: 120px;
     height: 120px;
     border-radius: 60px;
+    position: relative;
 }
 img {
     width: 100%;
@@ -77,4 +78,9 @@ img {
     font-size: 16px;
     font-weight: 400;
     color: black;
+}
+app-award {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
