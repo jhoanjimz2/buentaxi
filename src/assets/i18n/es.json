@@ -44,6 +44,7 @@
     "NOMBRE":"Nombre",
     "APELLIDO":"Apellido",
     "CONPERMISOPARAOPERAR":"Con permiso para operar",
+    "SINPERMISOPARAOPERAR":"Sin permiso para operar",
     "GUSTO":"Gustó",
     "NOGUSTO":"No gustó",
     "COMPARTIR":"Compartir",

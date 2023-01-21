@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Aplicacion } from 'src/app/interfaces/aplicacion.interface';
+import { Aplicacion } from 'src/app/interfaces/interfaces';
 
 
 

@@ -51,6 +51,23 @@ img {
         font-size: 30px;
     }
 }
+.sin-permiso {
+    margin-top: 10px;
+    width: 290px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    box-shadow: 10px 5px 5px #00000020;
+    ion-icon {
+        margin-left: 10px;
+        font-size: 30px;
+    }
+}
 .opciones {
     width: 270px;
     display: flex;
@@ -71,7 +88,6 @@ img {
     padding: 10px;
     border-radius: 50%;
     font-size: 25px;
-    margin-bottom: 5px;
     color: white;
 }
 .label-opcion {
@@ -83,4 +99,29 @@ app-award {
     position: absolute;
     bottom: 0px;
     right: 0px;
+}
+.p-r {
+    position: relative;
+}
+ion-badge {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    z-index: 9999;
+    background: #e0e0e0;
+    color: grey;
+    border-radius: 12.5px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+.nivel {
+    position: absolute;
+    bottom: 0px;
+    right: -9px;
+    font-size: 16px;
+    font-weight: bold;
 }

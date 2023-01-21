@@ -4,10 +4,10 @@
 </ion-button>
 
 <div id="form">
-  <form  autocomplete="off" class="p-20">
+  <form (ngSubmit)="cotizar()" [formGroup]="formulario" autocomplete="off" class="p-20">
 
     <input 
-      [(ngModel)]="formCotizar.origen" 
+      formControlName="origen" 
       name="origen"
       class="input_formulario" 
       [placeholder]="'ORIGEN' | translate"
@@ -16,7 +16,7 @@
       ngx-google-places-autocomplete/>
 
     <input 
-      [(ngModel)]="formCotizar.destino" 
+      formControlName="destino" 
       name="destino"
       class="input_formulario" 
       [placeholder]="'DESTINO' | translate"
@@ -24,12 +24,13 @@
       (onAddressChange)="destinoAddress($event)"
       ngx-google-places-autocomplete/>
 
-    <input 
-      type="number" 
-      [placeholder]="'ESTIMADO' | translate" 
-      [(ngModel)]="formCotizar.estimado" 
-      name="estimado" 
-      disabled/>
+    <div class="flex">
+      <input  
+        [placeholder]="'ESTIMADO' | translate" 
+        formControlName="estimado" 
+        name="estimado"/>
+      <ion-button mode="ios" type="submit" [disabled]="!formulario.valid">Calcular</ion-button>
+    </div>
 
   </form>
 </div>

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormCotizar } from 'src/app/interfaces/formularios.interface';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Address } from 'ngx-google-places-autocomplete/objects/address';
 declare var google: any;
 
@@ -12,7 +12,13 @@ export class FormCotizarComponent {
   @Output() btnConfirm: EventEmitter<any> = new EventEmitter();
 
   @Input() mapa: any;
-  formCotizar : FormCotizar = new FormCotizar();
+  formulario: FormGroup = this.fb.group({
+    origen: new FormControl('', [ Validators.required ] ),
+    destino: new FormControl('', [ Validators.required ] ),
+    estimado: new FormControl({value: '', disabled: true})
+  });
+
+
   click = 1;
   geoCoder = new google.maps.Geocoder();
 
@@ -32,20 +38,22 @@ export class FormCotizarComponent {
     visible: true
   });
 
-  constructor() { }
+  constructor(
+    private fb: FormBuilder
+  ) { }
   
   origenAddress(address: Address) {
-    this.formCotizar.origen = address.formatted_address;
-    this.markerOrigen(this.formCotizar.origen);
+    this.formulario.controls["origen"].setValue(address.formatted_address);
+    this.markerOrigen(this.formulario.controls["origen"].value);
   }
   destinoAddress(address: Address) {
-    this.formCotizar.destino = address.formatted_address;
-    this.markerDestino(this.formCotizar.destino);
+    this.formulario.controls["destino"].setValue(address.formatted_address);
+    this.markerDestino(this.formulario.controls["destino"].value);
   }
   
   show() { 
     if(this.click==1) {
-      document.getElementById("form")!.style.height = "182px";
+      document.getElementById("form")!.style.height = "202px";
       document.getElementById("icon-arrow")!.style.transform = "rotate(180deg)";
       this.click = this.click + 1;
     } else{
@@ -54,8 +62,7 @@ export class FormCotizarComponent {
       this.click = 1;
       this.markerDestino_.setMap(null);
       this.markerOrigen_.setMap(null);
-      this.formCotizar.origen = '';
-      this.formCotizar.destino = '';
+      this.formulario.reset();
     }   
   }
 
@@ -81,6 +88,10 @@ export class FormCotizarComponent {
     this.markerDestino_.setMap(null);
     this.markerDestino_.position = new google.maps.LatLng(lat, lng);
     this.markerDestino_.setMap(this.mapa);
+  }
+
+  cotizar() {
+    this.formulario.controls["estimado"].setValue('$ 10000 COP');
   }
 
 }

@@ -1,10 +1,16 @@
-<form>
+<form (ngSubmit)="validar()" [formGroup]="formulario" autocomplete="off">
   <h4>{{ 'NUEVOVIAJE' | translate }}</h4>
   <span>{{ 'INGRESALAPLACADELTAXI' | translate}}</span>
-  <input  
-            [placeholder]="'XXX000'" 
-            maxlength="6"  
-            autocomplete="off"
-        />
-  <ion-button mode="ios" (click)="validar()">{{ 'VALIDAR' | translate }}</ion-button>
+  <input
+    formControlName="placa"
+    [placeholder]="'XXX000'" 
+    maxlength="6"
+    autocomplete="off"
+  />
+  <ion-button 
+    [disabled]="!formulario.valid"
+    mode="ios"
+    type="submit">
+    {{ 'VALIDAR' | translate }}
+  </ion-button>
 </form>

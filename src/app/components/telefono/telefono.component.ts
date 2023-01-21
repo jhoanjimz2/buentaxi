@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Telefono } from 'src/app/interfaces/telefono.interface';
 import { CallNumber } from 'capacitor-call-number';
+import { Telefono } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-telefono',

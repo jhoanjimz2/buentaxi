@@ -1,7 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonSlides } from '@ionic/angular';
-import { Aplicacion } from 'src/app/interfaces/aplicacion.interface';
-import { Telefono } from 'src/app/interfaces/telefono.interface';
+import { Aplicacion, Telefono } from 'src/app/interfaces/interfaces';
 import { SolicitarTaxiService } from 'src/app/services/solicitar-taxi.service';
 
 @Component({

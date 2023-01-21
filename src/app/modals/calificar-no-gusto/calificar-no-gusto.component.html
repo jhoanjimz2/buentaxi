@@ -10,7 +10,10 @@
 
     <ion-content class="ion-padding">
       <ion-list lines="none">
-        <ion-radio-group allowEmptySelection="true" mode="md">
+        <ion-radio-group
+          [(ngModel)]="cal.calificacion"
+          name="calificacion"
+          allowEmptySelection="true" mode="md">
           <app-item-radio
             *ngFor="let opcion of nogusto"
             [opcion]="opcion">
@@ -19,6 +22,7 @@
       </ion-list>
 
       <app-form-calificar
+        [cal]="cal"
         (btnConfirm)="confirm()">
       </app-form-calificar>
 

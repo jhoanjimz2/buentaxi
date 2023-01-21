@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonModal } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
-import { OpcionCalificar } from 'src/app/interfaces/calificar.interface';
+import { OpcionCalificar } from 'src/app/interfaces/interfaces';
 import { CalificarService } from 'src/app/services/calificar.service';
 
 @Component({
@@ -14,6 +14,9 @@ export class CalificarNoGustoComponent {
 
   name: string = 'calificar';
   nogusto!: OpcionCalificar[];
+  cal = {
+    calificacion: "1"
+  }
 
   constructor(
     private calificarService: CalificarService

@@ -4,7 +4,7 @@ import { FormCalificarComponent } from './form-calificar/form-calificar.componen
 import { FormCotizarComponent } from './form-cotizar/form-cotizar.component';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormValidarPlacaComponent } from './form-validar-placa/form-validar-placa.component';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -25,6 +25,7 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     IonicModule,
     FormsModule,
+    ReactiveFormsModule,
     GooglePlaceModule,
     TranslateModule
   ]

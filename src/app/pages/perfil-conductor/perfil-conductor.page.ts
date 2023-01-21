@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Share } from '@capacitor/share';
 import { TranslateService } from '@ngx-translate/core';
+import { NuevoViajeService } from '../../services/nuevo-viaje.service';
+import { PerfilTaxista } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-perfil-conductor',
@@ -9,16 +11,13 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class PerfilConductorPage {
 
-  taxi = {
-    placas: 'UQS 139',
-    empresa: 'TAXIS SUPER EJECUTIVOS S.A..',
-    conductor: 'Jose Antonio Acosta Carval'
-  }
+  perfilTaxista: PerfilTaxista = new PerfilTaxista();
 
   constructor(
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    private nuevoViajeService: NuevoViajeService
   ) {
-
+    this.perfilTaxista = this.nuevoViajeService.perfilTaxista;
   }
 
   async shared() {
@@ -28,7 +27,8 @@ export class PerfilConductorPage {
     this.translateService.get('CONDUCTOR').subscribe(value => { m3 = value; });
     this.translateService.get('UNSERVICIOOFRECIDO').subscribe(value => { m4 = value; });
     await Share.share({
-      text: (` ${m1} ${this.taxi.placas} ${m2} ${this.taxi.empresa} ${m3} ${this.taxi.conductor}. ${m4} `),
+      text: (` ${m1} ${this.perfilTaxista.placa} ${m2} ${this.perfilTaxista.empresa} ${m3} 
+        ${this.perfilTaxista.nombre } ${this.perfilTaxista.apellido} . ${m4} `),
       url: 'https://sictaxi.gov.co/aplicacion',
     });
   }

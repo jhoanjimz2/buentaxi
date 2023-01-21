@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { PerfilTaxista } from 'src/app/interfaces/interfaces';
 import { NuevoViajeService } from 'src/app/services/nuevo-viaje.service';
 
 @Component({
@@ -14,11 +15,11 @@ export class NuevoViajePage {
     private navController: NavController,
   ) { }
 
-  validar() {
-    this.navController.navigateForward('/pages/perfil-conductor');
-    // this.nuevoViajeService.verificarPlaca('TZW393').subscribe(data => {
-    //   console.log(data);
-    // });
+  validar(event: any) {
+    this.nuevoViajeService.verificarPlaca(event.placa).subscribe((data: PerfilTaxista) => {
+      this.nuevoViajeService.perfilTaxista = data;
+      this.navController.navigateForward('/pages/perfil-conductor');
+    })
   }
 
 }

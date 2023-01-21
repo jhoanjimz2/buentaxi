@@ -4,7 +4,7 @@
 	<div class="contenedor-space">
 		<img class="logo" src="assets/logo.svg">
 		<app-form-validar-placa	
-			(btnValidar)="validar()">
+			(btnValidar)="validar($event)">
 		</app-form-validar-placa>
 		<img class="logo-sm" [src]="'assets/logo_sm.png' | imagenes">
 	</div>

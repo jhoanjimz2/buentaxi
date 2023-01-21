@@ -1,6 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { GeoLatLng, OptionsMapa } from 'src/app/interfaces/mapa.interface';
-import { MapaSinEtiqueta } from 'src/app/interfaces/modelo-mapa.interface';
+import { GeoLatLng, MapaSinEtiqueta, OptionsMapa } from 'src/app/interfaces/interfaces';
 import { MapaService } from 'src/app/services/mapa.service';
 declare var google: any;
 

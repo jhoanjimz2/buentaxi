@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { About } from 'src/app/interfaces/item-about.interface';
+import { Component } from '@angular/core';
+import { About } from 'src/app/interfaces/interfaces';
 import { AboutService } from 'src/app/services/about.service';
 
 @Component({

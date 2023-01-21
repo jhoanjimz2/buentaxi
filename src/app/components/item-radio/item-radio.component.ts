@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { OpcionCalificar } from 'src/app/interfaces/calificar.interface';
+import { OpcionCalificar } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-item-radio',

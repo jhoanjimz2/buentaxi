@@ -1,5 +1,5 @@
 <app-header-page 
-  [titulo]="'UQQ-000'"
+  [titulo]="perfilTaxista.placa"
   [rutaDefaultBack]="'/pages/tabs/nuevo-viaje'"
   [slot]="'end'">
 </app-header-page>
@@ -10,32 +10,46 @@
     <div class="contenedor">
 
       <div class="img">
-        <img [src]="'' | imagenes">
+        <img [src]="perfilTaxista.img_taxista | imagenes">
         <app-award></app-award>
+        <ion-label class="nivel">{{ perfilTaxista.calificaciones.nivel }}</ion-label>
       </div>
 
       <div class="d-text">
-        <ion-label class="label-one">{{ 'NOMBRE' | translate }}: Jhoan</ion-label>
-        <ion-label class="label-one">{{ 'APELLIDO' | translate }}: Jimenez</ion-label>
-        <ion-label class="label-two">Taxis 1a S.A.S.</ion-label>
+        <ion-label class="label-one">{{ 'NOMBRE' | translate }}: {{ perfilTaxista.nombre }}</ion-label>
+        <ion-label class="label-one">{{ 'APELLIDO' | translate }}: {{ perfilTaxista.apellido }}</ion-label>
+        <ion-label class="label-two">{{ perfilTaxista.empresa }}</ion-label>
       </div>
 
-      <div class="con-permiso">
+      <div class="con-permiso" *ngIf="perfilTaxista.permiso">
         {{ 'CONPERMISOPARAOPERAR' | translate }}
         <ion-icon name="checkmark-circle"></ion-icon>
       </div>
 
+      <div class="sin-permiso" *ngIf="!perfilTaxista.permiso">
+        {{ 'SINPERMISOPARAOPERAR' | translate }}
+        <ion-icon name="close-circle"></ion-icon>
+      </div>
+
       <div class="opciones">
         <div class="w-4 centrar">
-          <ion-icon name="heart" class="icon" id="open-modal-gusto"></ion-icon>
+          <div class="p-r" id="open-modal-gusto">
+            <ion-badge>{{ perfilTaxista.calificaciones.likes > 99 ? '+99' : perfilTaxista.calificaciones.likes }}</ion-badge>
+            <ion-icon name="heart" class="icon"></ion-icon>
+          </div>
           <ion-label class="label-opcion" id="open-modal-gusto">{{ 'GUSTO' | translate }}</ion-label>
         </div>
         <div class="w-4 centrar">
-          <ion-icon name="thumbs-down" class="icon" id="open-modal-no-gusto"></ion-icon>
+          <div class="p-r" id="open-modal-no-gusto">
+            <ion-badge>{{ perfilTaxista.calificaciones.dislikes > 99 ? '+99' : perfilTaxista.calificaciones.dislikes }}</ion-badge>
+            <ion-icon name="thumbs-down" class="icon"></ion-icon>
+          </div>
           <ion-label class="label-opcion" id="open-modal-no-gusto">{{ 'NOGUSTO' | translate }}</ion-label>
         </div>
         <div class="w-4 centrar">
-          <ion-icon name="share-social" class="icon" (click)="shared()"></ion-icon>
+          <div class="p-r" (click)="shared()">
+            <ion-icon name="share-social" class="icon"></ion-icon>
+          </div>
           <ion-label class="label-opcion" (click)="shared()">{{ 'COMPARTIR' | translate }}</ion-label>
         </div>
       </div>

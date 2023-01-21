@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { GeoLatLng } from '../interfaces/mapa.interface';
 import { Geolocation } from '@capacitor/geolocation';
+import { GeoLatLng } from 'src/app/interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'

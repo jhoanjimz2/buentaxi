@@ -1,26 +1,35 @@
-<form>
+<form
+  id="formulario"
+  (ngSubmit)="confirm()" 
+  [formGroup]="formulario" 
+  autocomplete="off" class="p-20">
 
   <ion-input
+    formControlName="email" 
+    name="email"
     mode="ios"
-    type="email"
     [placeholder]="'PLACEHOLDEREMAIL' | translate">
   </ion-input>
 
   <ion-input
+    formControlName="nombre" 
+    name="nombre"
     mode="ios"
     type="text"
     [placeholder]="'PLACEHOLDERNOMBRE' | translate">
   </ion-input>
 
   <ion-input
+    formControlName="telefono" 
+    name="telefono"
     mode="ios"
     type="number"
     [placeholder]="'PLACEHOLDERTELEFONO' | translate">
   </ion-input>
 
   <ion-button
-    (click)="confirm()"
-    [strong]="true"
+    type="submit"
+    [disabled]="!formulario.valid || !cal.calificacion"
     mode="ios">
     {{ 'CALIFICAR' | translate }}
   </ion-button>

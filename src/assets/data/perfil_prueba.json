@@ -1,0 +1,13 @@
+{
+    "img_taxista": "https://media.licdn.com/dms/image/D4E35AQHa3QybTZFTRg/profile-framedphoto-shrink_200_200/0/1673046464481?e=1674846000&v=beta&t=-ecK0OdZO-aWr-fjcN04DTHQio1-03VS6LEBCKTULtM",
+    "placa" : "UQQ-000",
+    "nombre": "Jhoan",
+    "apellido": "Jimenez",
+    "empresa": "Taxis 1a S.A.S.",
+    "permiso": true,
+    "calificaciones": {
+        "likes": 20000,
+        "dislikes" : 40,
+        "nivel": 9
+    }
+}

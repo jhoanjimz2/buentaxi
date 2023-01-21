@@ -10,16 +10,22 @@
     </app-header-modal>
 
     <ion-content class="ion-padding">
-      <ion-list lines="none">
-        <ion-radio-group allowEmptySelection="true" mode="md">
-          <app-item-radio
-            *ngFor="let opcion of gusto"
-            [opcion]="opcion">
-          </app-item-radio>
-        </ion-radio-group>
-      </ion-list>
+      <form #miFormulario="ngForm">
+        <ion-list lines="none">
+          <ion-radio-group 
+            [(ngModel)]="cal.calificacion"
+            name="calificacion"
+            allowEmptySelection="true" mode="md">
+            <app-item-radio
+              *ngFor="let opcion of gusto"
+              [opcion]="opcion">
+            </app-item-radio>
+          </ion-radio-group>
+        </ion-list>
+      </form>
 
       <app-form-calificar
+        [cal]="cal"
         (btnConfirm)="confirm()">
       </app-form-calificar>
 

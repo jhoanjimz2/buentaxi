@@ -234,6 +234,9 @@
     --ion-card-background: #1e1e1e;
   }
 }
+.ng-invalid.ng-touched:not(form) {
+  border: 1px solid #f61a16 !important;
+}
 $colors: (
 	primary:    #FFF25C,
 	secondary:  #015a98,

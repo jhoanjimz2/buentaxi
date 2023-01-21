@@ -28,11 +28,13 @@ input {
     padding: 20px;
     border: none;
     border-radius: 3px;
+    // background-color: #eb5d3350;
     background-color: rgba(229, 229, 229, 0.47);
+    color: #000;
     font-size: 30px;
     width: 200px;
     text-align: center;
-    font-weight: 400;
+    font-weight: bold;
     text-transform: uppercase;
 }
 ion-button{
