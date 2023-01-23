@@ -1,3 +1,4 @@
+export { MyDevice } from './validar-placa.interface';
 export { PerfilTaxista } from './perfil-taxista.interface';
 export { Telefono } from './telefono.interface';
 export { MapaSinEtiqueta } from './modelo-mapa.interface';
