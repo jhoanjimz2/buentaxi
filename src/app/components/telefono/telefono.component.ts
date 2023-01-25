@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { CallNumber } from 'capacitor-call-number';
 import { Telefono } from 'src/app/interfaces/interfaces';
 
 @Component({
@@ -14,12 +13,6 @@ export class TelefonoComponent {
   constructor() { }
 
   async llamar() {
-    await CallNumber.call(
-      { 
-        number: this.telefono.telefono,
-        bypassAppChooser: false
-      }
-    );
   }
 
 }

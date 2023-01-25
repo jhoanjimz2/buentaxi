@@ -23,9 +23,9 @@ export class NuevoViajeService  extends ConexionService {
     ) { super(http); }
 
 
-  /* verificarPlaca(myDevice: MyDevice){
-    return this.consultaPOST('/api/searchVehiculoByPlacaConductores', myDevice);
-  } */
+  // verificarPlaca(myDevice: MyDevice){
+  //   return this.consultaPOST('/api/searchVehiculoByPlacaConductores', myDevice);
+  // }
   getParametros(){
     return this.consultaGET('/api/getParametros');
   }
