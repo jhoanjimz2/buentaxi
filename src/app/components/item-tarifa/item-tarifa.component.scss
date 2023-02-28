@@ -1,0 +1,34 @@
+.item-conten {
+    width: 100%;
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.slot-img {
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 25px;
+    }
+}
+.slot-comentario {
+    width: calc(100% - 25px - 50px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 600;
+    color: black;
+    font-size: 13px;
+    padding-left: 20px;
+}
+.slot-precio {
+    width: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 600;
+    color: black;
+    font-size: 13px;
+}

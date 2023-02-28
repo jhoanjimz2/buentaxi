@@ -1,0 +1,49 @@
+.button {
+    width: 90%;
+    border: 3px solid #000;
+    display: flex;
+    height: 50px;
+    margin: auto;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background: white;
+    img {
+        width: 23px;
+        margin-left: 10px;
+    }
+}
+.buttonSelect {
+    width: 90%;
+    border: 3px solid #000;
+    display: flex;
+    height: 50px;
+    margin: auto;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: black;
+    img {
+        width: 23px;
+        margin-left: 10px;
+    }
+}
+ion-item {
+    --padding-start: 12px;
+    ion-radio {
+        --color: black;
+        --color-checked: black;
+    }
+    ion-label {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,43 @@
+.item {
+    width: 100%;
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all .3s ease-out;
+}
+.item:active {
+    width: 100%;
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all .3s ease-out;
+    background-color: #00000020;
+}
+.check {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 20px;
+        transition: all .3s ease-out;
+    }
+    .in {
+        display: block;
+        transition: all .1s ease-out;
+    }
+    .out {
+        display: none;
+        transition: all .1s ease-out;
+    }
+}
+.label {
+    width: calc(100% - 50px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    label {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}

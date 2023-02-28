@@ -1,0 +1,128 @@
+.div-title {
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    label {
+        font-size: 16px;
+        font-weight: 400;
+        color: #000;
+    }
+}
+.div-encabezado {
+    width: 100%;
+    margin-bottom: 34PX;
+}
+.div-info-taxi {
+    margin: 16px;
+    background-color: #FFF25C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 25px;
+    .label1 {
+        color: #000;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .label2 {
+        color: #000;
+        font-size: 25px;
+        font-weight: 800;
+    }
+}
+.div-info-taxista {
+    margin: 16px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 25px;
+    padding-left: 30px;
+    .wi80 {
+        width: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 110px;
+            height: 110px;
+            border-radius: 55px;
+            object-fit: cover;
+        }
+    }
+    .wi100 {
+        width: calc(100% - 110px);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding-left: 20px;    
+        .label1 {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .label2 {
+            color: #fff;
+            font-size: 18px;;
+            font-weight: 800;
+        }
+    }
+}
+.div-stores {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    label {
+        font-size: 16px;
+        font-weight: 400;
+        color: #000;
+    }
+    .stores {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .appstore {
+            width: 100px;
+            margin-left: 5px;
+            border-radius: 5px;
+        }
+        .playstore {
+            width: 100px;
+            margin-right: 5px;
+            border-radius: 5px;
+        }
+    }
+}
+
+.div-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+    app-barra-colores-tabs {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .labelc {
+        color: grey;
+        font-size: 8px;
+        font-weight: 500;
+    }
+    .imgLogo {
+        width: 100px;
+    }
+}
+#compartirHtml {
+    background-color: white;
+}

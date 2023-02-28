@@ -1,0 +1,43 @@
+<form
+  id="formulario"
+  (ngSubmit)="confirm()" 
+  [formGroup]="formulario" 
+  autocomplete="off" class="p-20">
+
+  <ion-input
+    formControlName="email" 
+    name="email"
+    mode="ios"
+    class="inputs"
+    [placeholder]="'INGRESATUEMAIL' | translate">
+  </ion-input>
+  <label>{{'ESTECAMPOREQUIRED' | translate}}</label>
+
+  <ion-input
+    formControlName="nombre" 
+    name="nombre"
+    mode="ios"
+    type="text"
+    class="inputs"
+    [placeholder]="'INGRESATUNOMBRE' | translate">
+  </ion-input>
+  <label>{{'ESTECAMPOREQUIRED' | translate}}</label>
+
+  <ion-input
+    formControlName="telefono" 
+    name="telefono"
+    mode="ios"
+    type="number"
+    class="inputs"
+    [placeholder]="'INGRESATUTELEFONO' | translate">
+  </ion-input>
+  <label>{{'ESTECAMPOREQUIRED' | translate}}</label>
+
+  <button 
+    [disabled]="!formulario.valid"
+    type="submit" 
+    class="botonAmarillo">
+    {{'ENVIAR' | translate}}
+  </button>
+
+</form>

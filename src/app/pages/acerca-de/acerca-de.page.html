@@ -1,0 +1,35 @@
+<ion-content>
+
+  <app-header
+    [backColor]="'#8DD7F7'"
+    [title]=" 'ACERCADE' | translate">
+  </app-header>
+
+  <div class="content">
+    <div class="headling">
+      <label>{{'BUENTAXI' | translate}}</label>
+    </div>
+    <app-item-about
+      [img]="'assets/new/about/cotizar.png'"
+      [text]="'COTIZARELPRECIO' | translate">
+    </app-item-about>
+    <app-item-about
+      [img]="'assets/new/about/check.png'"
+      [text]="'CONOCERLAINFO' | translate">
+    </app-item-about>
+    <app-item-about
+      [img]="'assets/new/about/like.png'"
+      [text]="'CALIFICARSERVICIO' | translate">
+    </app-item-about>
+    <app-item-about
+      [img]="'assets/new/about/compartir.png'"
+      [text]="'COMPARTIRLOS' | translate">
+    </app-item-about>
+
+  </div>
+
+</ion-content>
+<ion-footer>
+  <label class="labelc">{{'CREADOPOR' | translate}}</label>
+  <img [src]="'assets/new/about/innlab.png'" class="imgLogo">
+</ion-footer>

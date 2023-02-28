@@ -1,0 +1,50 @@
+<ion-modal [isOpen]="modalsService.modalCompartir" (willDismiss)="onWillDismiss($event)">
+  <ng-template>
+
+    <ion-content>
+      <div id="compartirHtml">
+        <div class="div-title">
+          <label>{{'SERVICIOPRESTADO' | translate}}</label> 
+        </div>
+  
+        <div class="div-encabezado">
+          <app-encabezado></app-encabezado>
+        </div>
+  
+        <div class="div-info-taxi">
+          <label class=label1>{{'VOYENELTAXI' | translate}}</label>
+          <label class=label2>{{taxista.marca}} {{taxista.modelo}}</label>
+          <label class=label2>{{taxista.placa}}</label>
+        </div>
+  
+        <div class="div-info-taxista">
+          <div class="wi80">
+            <img [src]="''| imagenes">
+          </div>
+          <div class="wi100">
+            <label class=label1>{{'AFILIADOA'| translate}}</label>
+            <label class=label1>{{taxista.razonSocial}}</label>
+            <label class=label2>{{taxista.nombres}}</label>
+            <label class=label2>{{taxista.apellidos}}</label>
+          </div>
+        </div>
+  
+        <div class="div-stores">
+          <label>{{'DISPONIBLEEN' | translate}}</label>
+          <div class="stores">
+            <img [src]="'assets/new/cotizador/playstore.png'" class="playstore">
+            <img [src]="'assets/new/cotizador/appstore.png'" class="appstore">
+          </div>
+        </div>
+  
+  
+        <div class="div-footer">
+          <app-barra-colores-tabs></app-barra-colores-tabs>
+          <label class="labelc">{{'CREADOPOR' | translate}}</label>
+          <img src="assets/new/about/innlab.png" class="imgLogo">
+        </div>
+      </div>
+    </ion-content>
+
+  </ng-template>
+</ion-modal>

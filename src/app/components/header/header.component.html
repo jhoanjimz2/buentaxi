@@ -1,0 +1,11 @@
+<div class="contenedor" [ngStyle]="{'background-color': backColor}">
+  <div class="slot-back" (click)="back()">
+    <img [src]="'assets/new/components/arrow_back.png'" *ngIf="!modal2">
+    <img [src]="'assets/new/components/arrow_back_white.png'" *ngIf="modal2" class="img2">
+  </div>
+  <div class="slot-secondary">
+    <ion-label class="subtitle2" *ngIf="subtitle != '' && !modal2">{{subtitle}}</ion-label>
+    <ion-label class="title2" *ngIf="!modal2">{{title}}</ion-label>
+    <ion-label class="title3" *ngIf="modal2">{{title}}</ion-label>
+  </div>
+</div>

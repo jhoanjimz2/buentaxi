@@ -1,0 +1,176 @@
+
+
+<ion-content class="contenedor">
+
+    
+    <div class="mapah50" id="mapa">
+        <div #map id="map"></div>
+        <div class="map-content" *ngIf="cotizado">
+            <div class="content-div">
+                <label>{{'ORIGEN' | translate}} {{formulario.controls["origen"].value}}</label>
+                <img [src]="'assets/new/cotizador/origen.png'">
+            </div>
+            <div class="h10"></div>
+            <div class="content-div">
+                <label>{{'DESTINO' | translate}} {{formulario.controls["destino"].value}}</label>
+                <img [src]="'assets/new/cotizador/destino.png'">
+            </div>
+        </div>
+        <div class="iconoLocal" (click)="setPosition()"><ion-icon name="locate"></ion-icon></div>
+    </div>
+
+
+
+    <div *ngIf="!cotizado">
+        <form (ngSubmit)="validOrigin()" [formGroup]="formulario" autocomplete="off" class="cotizacion">
+            <div class="inputsCO">
+                <div class="pr">
+                    <input 
+                      formControlName="origen" 
+                      name="origen"
+                      class="inputs"
+                      [placeholder]="''"
+                      #placesRef="ngx-places" 
+                      (onAddressChange)="setAddress($event, 'origen')"
+                      [options]="opciones"
+                      ngx-google-places-autocomplete/>
+                    <label>{{'ORIGEN' | translate}}</label>
+                    <img [src]="'assets/new/cotizador/origen.png'">
+                </div>
+                <div class="h10"></div>
+                <div class="pr">
+                    <input
+                      formControlName="destino" 
+                      name="destino"
+                      class="inputs"
+                      [placeholder]="''"
+                      #placesRef="ngx-places" 
+                      (onAddressChange)="setAddress($event, 'destino')"
+                      [options]="opciones"
+                      ngx-google-places-autocomplete/>
+                    <label>{{'DESTINO' | translate}}</label>
+                    <img [src]="'assets/new/cotizador/destino.png'">
+                </div>
+            </div>
+            <div class="h10"></div>
+            <div class="inputsCO">
+                <app-item-radio-cotizador
+                    [item]="radioCoti[0]">
+                </app-item-radio-cotizador>
+                <div class="h10"></div>
+                <app-item-radio-cotizador
+                    [item]="radioCoti[1]">
+                </app-item-radio-cotizador>
+            </div>
+            <button class="botonAmarillo" type="submit" [disabled]="!formulario.valid">{{'CALCULAR' | translate}}</button>
+        </form>
+
+    </div>
+
+
+    <div class="cotizacion" *ngIf="cotizado">
+
+        <div class="inputsCO">
+            <div class="df">
+                <div class="w60">
+                    <img [src]="'assets/new/cotizador/car.png'">
+                </div>
+                <div class="w100" *ngIf="responseCotizacion.tarifaFija">
+                    <label class="label1">{{'TERIFAFIJA' | translate}}:</label><br>
+                    <label class="label2" *ngIf="responseCotizacion.tarifaBase > 7249">${{ responseCotizacion.tarifaBase - 250 | formattNumber }} - ${{ responseCotizacion.tarifaBase + 250 | formattNumber }}</label>
+                    <label class="label2" *ngIf="responseCotizacion.tarifaBase < 7249">${{ 7000 | formattNumber }} - ${{ 7500 | formattNumber }}</label>
+                </div>
+                <div class="w100" *ngIf="!responseCotizacion.tarifaFija">
+                    <label class="label1">{{'TARIFAESTIMADA' | translate}}:</label><br>
+                    <label class="label2" *ngIf="responseCotizacion.tarifaBase > 7249">${{ responseCotizacion.tarifaBase - 250 | formattNumber }} - ${{ responseCotizacion.tarifaBase + 250 | formattNumber }}</label>
+                    <label class="label2" *ngIf="responseCotizacion.tarifaBase < 7249">${{ 7000 | formattNumber }} - ${{ 7500 | formattNumber }}</label>
+                </div>
+                <div class="w20" (click)="openModal()">
+                    <img [src]="'assets/new/cotizador/about.png'">
+                </div>
+            </div>
+
+
+            <div class="ptb15">
+                <div *ngIf="responseCotizacion.recargos">
+                    <div class="df" *ngIf="responseCotizacion.recargos.recargoNocturno">
+                        <div class="w80 precios">
+                            <label class="l1">{{'RECARGONOCTURNO2' | translate}}</label>
+                            <label class="l2">${{responseCotizacion.recargos.recargoNocturno | formattNumber}}</label>
+                        </div>
+                        <div class="w20"></div>
+                    </div>
+                    <div class="df" *ngIf="responseCotizacion.recargos.recargofestivoDomingo">
+                        <div class="w80 precios">
+                            <label class="l1">{{'RECARGOFESTIVODOMINGO' | translate}}</label>
+                            <label class="l2">${{responseCotizacion.recargos.recargofestivoDomingo | formattNumber}}</label>
+                        </div>
+                        <div class="w20"></div>
+                    </div>
+                    <div class="df" *ngIf="responseCotizacion.recargos.recargollamadaApp">
+                        <div class="w80 precios">
+                            <label class="l1">{{'RECARGOLLAMADAOAPP' | translate}}</label>
+                            <label class="l2">${{responseCotizacion.recargos.recargollamadaApp | formattNumber}}</label>
+                        </div>
+                        <div class="w20"></div>
+                    </div>
+                    <div class="df" *ngIf="responseCotizacion.recargos.recargoOrigenDestino">
+                        <div class="w80 precios">
+                            <label class="l1">{{'RECARGOZONAS' | translate}}</label>
+                            <label class="l2">${{responseCotizacion.recargos.recargoOrigenDestino | formattNumber}}</label>
+                        </div>
+                        <div class="w20"></div>
+                    </div>
+                    <div class="df" *ngIf="responseCotizacion.recargos.recargoSalidaTerminal">
+                        <div class="w80 precios">
+                            <label class="l1">{{'RECARGOZONASTERMINAL' | translate}}</label>
+                            <label class="l2">${{responseCotizacion.recargos.recargoSalidaTerminal | formattNumber}}</label>
+                        </div>
+                        <div class="w20"></div>
+                    </div>
+                    <div class="df" *ngIf="responseCotizacion.recargos.recargoSalidaAeropuerto">
+                        <div class="w80 precios">
+                            <label class="l1">{{'RECARGOZONASAEROPUERTO' | translate}}</label>
+                            <label class="l2">${{responseCotizacion.recargos.recargoSalidaAeropuerto | formattNumber}}</label>
+                        </div>
+                        <div class="w20"></div>
+                    </div>
+                    <div class="df" *ngIf="responseCotizacion.recargos.valorTarifaFija">
+                        <div class="w80 precios">
+                            <label class="l1">{{'TERIFAFIJA' | translate}}</label>
+                            <label class="l2">${{responseCotizacion.recargos.valorTarifaFija | formattNumber}}</label>
+                        </div>
+                        <div class="w20"></div>
+                    </div>
+                </div>
+                <div class="df" class="df" *ngIf="!responseCotizacion.tarifaFija">
+                    <div class="w80 precios">
+                        <label class="l1">{{'TARIFAESTIMADA' | translate}}</label>
+                        <label class="l2" *ngIf="responseCotizacion.tarifaBase > 7249">${{ responseCotizacion.tarifaBase - 250 | formattNumber }} - ${{ responseCotizacion.tarifaBase + 250 | formattNumber }}</label>
+                        <label class="l2" *ngIf="responseCotizacion.tarifaBase < 7249">${{ 7000 | formattNumber }} - ${{ 7500 | formattNumber }}</label>
+                    </div>
+                    <div class="w20"></div>
+                </div>
+            </div>
+
+
+
+            <div class="df">
+                <div class="w80">
+                    <div class="total">
+                        <label class="l1">{{'TOTALESTIMADO' | translate}}:</label>
+                        <label class="l2" *ngIf="responseCotizacion.tarifaAprox > 7249">${{ responseCotizacion.tarifaAprox - 250 | formattNumber }} - ${{ responseCotizacion.tarifaAprox + 250 | formattNumber }}</label>
+                        <label class="l2" *ngIf="responseCotizacion.tarifaAprox < 7249">${{ 7000 | formattNumber }} - ${{ 7500 | formattNumber }}</label>
+                    </div>
+                </div>
+                <div class="w20"></div>
+            </div>
+        </div>
+        <button class="botonAmarillo" (click)="resetCalcular()">{{'CALCULARNUEVO' | translate}}</button>
+
+    </div>
+
+
+    <app-tarifas></app-tarifas>
+    
+</ion-content>

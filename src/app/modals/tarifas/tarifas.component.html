@@ -1,0 +1,30 @@
+
+
+<ion-modal [isOpen]="modalsService.modalTarifas" (willDismiss)="onWillDismiss($event)">
+  <ng-template>
+    <ion-content>
+      <app-header
+        [modal]="true"
+        [modal2]="true"
+        [backColor]="'#000'"
+        [title]="'TARIFAOFICIALES' | translate"
+        (btnCancel)="cancel()">
+      </app-header>
+      <div class="contenedor">
+        <app-item-tarifa 
+          *ngFor="let item of tarifas"
+          [tarifa]="item">
+        </app-item-tarifa>
+      </div>
+      <div class="h20"></div>
+      <app-item-tarifa-car></app-item-tarifa-car>
+      <div class="h20"></div>
+      <app-item-tarifa-phone></app-item-tarifa-phone>
+      <div class="h20"></div>
+      <div class="h20"></div>
+      <app-barra-colores-tabs></app-barra-colores-tabs>
+      <div class="h20"></div>
+      <div class="h20"></div>
+    </ion-content>
+  </ng-template>
+</ion-modal>

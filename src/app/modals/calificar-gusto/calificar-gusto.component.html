@@ -1,0 +1,42 @@
+<ion-modal [isOpen]="modalsService.modalLike" (willDismiss)="onWillDismiss($event)">
+  <ng-template>
+
+    <app-header
+      [modal]="true"
+      [backColor]="'#FFF25C'"
+      [title]="'CALIFICAR' | translate"
+      (btnCancel)="cancel()">
+    </app-header>
+    
+    <ion-content class="ion-padding">
+      
+      <!-- <app-item-radio
+        *ngFor="let opcion of gusto; let i = index"
+        [index]="i"
+        [calificacion]="calificacion"
+        [opcion]="opcion">
+      </app-item-radio> -->
+      <ion-radio-group [value]="idComentario" mode="md" (ionChange)="muestra($event)">
+        <ion-item *ngFor="let opcion of gusto; let i = index" lines="none">
+          <ion-radio slot="start" [value]="opcion.id"></ion-radio>
+          <ion-label>{{opcion.comentario}}</ion-label>
+        </ion-item>
+      </ion-radio-group>
+
+      <button 
+        [ngClass]="{'button': !recomend, 'buttonSelect': recomend}" 
+        (click)="recomend = !recomend">
+        {{'RECOMENDAR' | translate}}
+        <img [src]="'assets/new/taxista/star.png'" *ngIf="!recomend">
+        <img [src]="'assets/new/taxista/starW.png'" *ngIf="recomend">
+      </button>
+
+      <button
+        (click)="confirm()"
+        class="botonAmarillo">
+        {{'SIGUIENTE' | translate}}
+      </button>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>

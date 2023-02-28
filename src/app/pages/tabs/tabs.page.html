@@ -1,0 +1,53 @@
+<ion-tabs mode="md" (ionTabsDidChange)="change()" #tabs>
+
+  <app-barra-colores-tabs></app-barra-colores-tabs>
+  
+  <ion-tab-bar slot="bottom">
+
+    <ion-tab-button tab="cotizar">
+      <img [src]="'assets/new/tab/cotizar.png'" class="icon1">
+      <ion-label>{{ 'COTIZAR' | translate }}</ion-label>
+      <img class="opacityOut" id="cotizar" [src]="'assets/new/tab/bar-yellow.png'">
+    </ion-tab-button>
+
+    <ion-tab-button tab="nuevo-viaje">
+      <img [src]="'assets/new/tab/nuevoviaje.png'" class="icon2">
+      <ion-label>{{ 'NUEVOVIAJE' | translate }}</ion-label>
+      <img class="opacityOut" id="nuevo-viaje" [src]="'assets/new/tab/bar-yellow.png'">
+    </ion-tab-button>
+
+    <ion-tab-button tab="ajustes">
+      <img [src]="'assets/new/tab/ajustes.png'" class="icon1">
+      <ion-label>{{ 'AJUSTES' | translate }}</ion-label>
+      <img class="opacityOut" id="ajustes" [src]="'assets/new/tab/bar-blue.png'">
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+  
+  <div class="swipeDown" id="menu">
+    <div class="contenedor">
+      <img class="bar-black" [src]="'assets/new/tab/bar-black.png'">
+      <div class="wh20"></div>
+      <div class="button-menu" (click)="pages('/pages/idioma')">
+        <img [src]="'assets/new/tab/idioma.png'" class="icon1">
+        <ion-label>{{ 'IDIOMA' | translate }}</ion-label> 
+        <div class="wh9"></div>
+      </div>
+      <div class="wh20"></div>
+      <div class="button-menu" (click)="pages('/pages/acerca-de')">
+        <img [src]="'assets/new/tab/about.png'" class="icon1">
+        <ion-label>{{ 'ACERCADE' | translate }}</ion-label>
+        <div class="wh9"></div>
+      </div>
+      <div class="wh20"></div>
+      <div class="button-menu" (click)="back()">
+        <img [src]="'assets/new/tab/ajustes.png'" class="icon1">
+        <ion-label>{{ 'AJUSTES' | translate }}</ion-label>
+        <div class="wh9"></div>
+      </div>
+    </div>
+  </div>
+
+
+</ion-tabs>

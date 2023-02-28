@@ -1,0 +1,107 @@
+ion-tabs {
+    background: white;
+}
+ion-tab-bar {
+    height: 62px;
+    border: none;
+    padding-top: 20px;
+}
+ion-tab-button {
+    --color	: #000;
+    --color-focused: #000;
+    --color-selected: #000;
+    --padding-end: 0px;
+    --padding-start: 0px;
+    --ripple-color: transparent;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.icon1 {
+    height: 30px;
+}
+.icon2 {
+    width: 30px;
+}
+.opacityIn {
+    width: 50px;
+    opacity: 1;
+    animation-duration: .3s;
+    animation-name: opacityIn;
+}
+.opacityOut {
+    width: 50px;
+    opacity: 0;
+    animation-duration: .3s;
+    animation-name: opacityOut;
+}
+@keyframes opacityIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes opacityOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+.swipeUp {
+    transition: all .3s ease-out;
+    flex: 0 0 calc(calc(4 / var(--ion-grid-columns, 12)) * 100%);
+    width: calc(calc(4 / var(--ion-grid-columns, 12)) * 100%);
+    max-width: calc(calc(4 / var(--ion-grid-columns, 12)) * 100%);
+    position: absolute;
+    z-index: 10;
+    right: 0px;
+    bottom: 0px;
+}
+.swipeDown {
+    transition: all .3s ease-out;
+    flex: 0 0 calc(calc(4 / var(--ion-grid-columns, 12)) * 100%);
+    width: calc(calc(4 / var(--ion-grid-columns, 12)) * 100%);
+    max-width: calc(calc(4 / var(--ion-grid-columns, 12)) * 100%);
+    position: absolute;
+    z-index: 10;
+    right: 0px;
+    bottom: -266px;
+}
+.contenedor {
+    position: relative;
+    height: 246px;
+    border-top-left-radius: 25px;
+    background-color: #8DD7F7;
+}
+.bar-black {
+    width: 50px;
+    position: absolute;
+    top: -5px;
+    left: calc(50% - 25px);
+}
+.wh20{
+    width: 100%;
+    height: 20px;
+}
+.wh9{
+    width: 100%;
+    height: 9.11px;
+}
+.button-menu {
+    font-size: 12px;
+    font-weight: bold;
+    height: 62px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}

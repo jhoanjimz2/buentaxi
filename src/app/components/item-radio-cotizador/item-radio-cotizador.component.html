@@ -1,0 +1,9 @@
+<div class="item" (click)="check(!item.valid)">
+  <div class="check">
+    <img [src]="'assets/new/taxista/checkOut.png'" id="in{{item.id}}" class="in">
+    <img [src]="'assets/new/taxista/checkIn.png'"  id="out{{item.id}}" class="out">
+  </div>
+  <div class="label">
+    <label>{{item.comentario | translate}}</label>
+  </div>
+</div>

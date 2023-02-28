@@ -1,0 +1,112 @@
+.card-taxista {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px 20px 20px 20px;
+    position: relative;
+    .img-star {
+        width: 25px;
+        position: absolute;
+        right: 15px;
+        top: 23px;
+        z-index: 99;    
+    }
+}
+.row-card {
+    display: flex;
+}
+.col-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+    }
+}
+.col-text {
+    width: calc(100% - 100px);
+    padding-left: 15px;
+    h1 {
+        margin: 0px;
+        font-weight: bold;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 100%;
+    }
+    h6 {
+        margin: 0px;
+        font-size: 12px;
+        font-weight: 600;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 100%;   
+    }
+}
+.col-s4 {
+    flex: 0 0 calc(4 / var(--ion-grid-columns, 12) * 100%);
+    width: calc(4 / var(--ion-grid-columns, 12) * 100%);
+    max-width: calc(4 / var(--ion-grid-columns, 12) * 100%);
+    div {
+        position: relative;
+        .bad {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            position: absolute;
+            top: -7px;
+            right: -2px;
+            background: #ff000040;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            label {
+                font-size: 10px;
+                font-weight: bold;
+                color: black;
+            }
+        }
+        img {
+            width: 20px;
+            margin-right: 10px;
+        }
+    }
+    h6 {
+        margin: 0px;
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .img1 {
+        width: 15px !important;
+    }
+}
+.l { 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.c { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.e { 
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.pt20 { padding-top: 20px; }
+.red {
+    color: red !important;
+}
+.black {
+    color: black !important;
+}

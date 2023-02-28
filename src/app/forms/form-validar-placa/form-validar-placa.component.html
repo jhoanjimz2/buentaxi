@@ -1,0 +1,19 @@
+<div class="content-form">
+  <form (ngSubmit)="validar()" [formGroup]="formulario" autocomplete="off">
+
+    <label class="title">{{'NUEVOVIAJE' | translate}}</label>
+    <label class="subtitle">{{'INGRESENUMERO' | translate}}</label>
+    <input
+      formControlName="placa"
+      [placeholder]="'XXX XXX'" 
+      maxlength="6"
+      autocomplete="off"
+    />
+    <button
+      class="botonAmarillo"
+      [disabled]="!formulario.valid"
+      type="submit">
+      {{'VALIDAR' | translate}}
+    </button>
+  </form>
+</div>

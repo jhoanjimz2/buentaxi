@@ -1,0 +1,9 @@
+<div class="item" (click)="check(!opcion.seleccionado)">
+  <div class="check">
+    <img [src]="'assets/new/taxista/checkOut.png'" id="in{{index}}" class="in">
+    <img [src]="'assets/new/taxista/checkIn.png'"  id="out{{index}}" class="out">
+  </div>
+  <div class="label">
+    <label>{{opcion.comentario}}</label>
+  </div>
+</div>

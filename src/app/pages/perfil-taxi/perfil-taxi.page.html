@@ -1,0 +1,22 @@
+<ion-content>
+
+  <app-header
+    [backColor]="'#FFF25C'"
+    [title]="taxistas[0].placa"
+    [subtitle]="taxistas[0].marca + ' ' + taxistas[0].modelo">
+  </app-header>
+
+  <ion-list>
+    <app-card-taxista
+      *ngFor="let taxista of taxistas"
+      [taxista]="taxista"
+      (like)="modalLike($event)"
+      (disLike)="modalDisLike($event)"
+      (share)="modalShare($event)">
+    </app-card-taxista>
+  </ion-list>
+
+  <app-calificar-gusto [idVinculacion]="idVinculacion" [taxistas]="taxistas"></app-calificar-gusto>
+  <app-calificar-no-gusto [idVinculacion]="idVinculacion" [taxistas]="taxistas"></app-calificar-no-gusto>
+  <app-compartir [taxista]="taxista"></app-compartir>
+</ion-content>

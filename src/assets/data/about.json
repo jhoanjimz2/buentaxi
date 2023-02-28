@@ -1,0 +1,30 @@
+{
+    "es": {
+        "descripcion": "Buen Taxi es una aplicación móvil que la Alcaldía Distrital de Santa Marta pone a disposición de la ciudadanía con el fin de ofrecer una herramienta que permita a samarios y turistas: ",
+        "items": [
+            {
+                "descripcion": "Acceder a la información del servicio público de taxis de la ciudad, validando en línea y en tiempo real la información de los conductores"
+            },
+            {
+                "descripcion": "Calificar el servicio prestado"
+            },
+            {
+                "descripcion": "Compartir en sus redes sociales los viajes realizados en taxi"
+            }
+        ]
+    },
+    "en": {
+        "descripcion": "Buen Taxi is a mobile application that the District Mayor's Office of Santa Marta makes available to citizens in order to offer a tool that allows Samaritans and tourists: ",
+        "items": [
+            {
+                "descripcion": "Access to the city's public cab service information, validating online and in real time the drivers' information."
+            },
+            {
+                "descripcion": "Qualify the service provided"
+            },
+            {
+                "descripcion": "Share your cab trips on your social networks"
+            }
+        ]
+    }
+}

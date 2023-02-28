@@ -1,0 +1,44 @@
+<div class="card-taxista">
+    <img [src]="'assets/new/taxista/star.png'" class="img-star">
+    <div class="row-card">
+        <div class="col-img">
+            <img [src]="''| imagenes">
+        </div>
+        <div class="col-text">
+            <h1>{{taxista.nombres}}</h1>
+            <h1>{{taxista.apellidos}}</h1>
+            <h6>{{taxista.jornada}}</h6>
+            <h6>{{taxista.razonSocial}}</h6>
+            <h6 *ngIf="taxista.refrendo">{{'CONPERMISO' | translate}}</h6>
+            <h6 *ngIf="!taxista.refrendo">{{'SINPERMISO' | translate}}</h6>
+        </div>
+    </div>
+    <div class="row-card pt20">
+        <div class="col-s4 l" (click)="likeClick()">
+            <div>
+                <div class="bad">
+                    <label *ngIf="taxista.positivos > 99">+99</label>
+                    <label *ngIf="taxista.positivos < 99">{{taxista.positivos}}</label>
+                </div>
+                <img [src]="'assets/new/taxista/like1.png'" *ngIf="taxista.GoodComment">
+                <img [src]="'assets/new/taxista/like.png'" *ngIf="!taxista.GoodComment">
+            </div>
+            <h6 [ngClass]="{'red': taxista.GoodComment, 'black': !taxista.GoodComment}">{{'LIKE' | translate}}</h6>
+        </div>
+        <div class="col-s4 c" (click)="disLikeClick()">
+            <div>
+                <div class="bad">
+                    <label *ngIf="taxista.negativos > 99">99</label>
+                    <label *ngIf="taxista.negativos < 99">{{taxista.negativos}}</label>
+                </div>
+                <img [src]="'assets/new/taxista/dislike1.png'" *ngIf="taxista.BadComment">
+                <img [src]="'assets/new/taxista/dislike.png'" *ngIf="!taxista.BadComment">
+            </div>
+            <h6 [ngClass]="{'red': taxista.BadComment, 'black': !taxista.BadComment}">{{'DISLIKE' | translate}}</h6>
+        </div>
+        <div class="col-s4 e" (click)="shared()">
+            <img [src]="'assets/new/taxista/shared.png'" class="img1">
+            <h6>{{'COMPARTIR' | translate}}</h6>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BuenTaxi</string>
+    <string name="title_activity_main">BuenTaxi</string>
+    <string name="package_name">gov.co.santamarta.buentaxiapp</string>
+    <string name="custom_url_scheme">gov.co.santamarta.buentaxiapp</string>
+</resources>
