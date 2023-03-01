@@ -38,7 +38,7 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        width: 100%;
+        width: 90%;
     }
     h6 {
         margin: 0px;
@@ -47,13 +47,25 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        width: 100%;   
+        width: 90%;
     }
 }
 .col-s4 {
     flex: 0 0 calc(4 / var(--ion-grid-columns, 12) * 100%);
     width: calc(4 / var(--ion-grid-columns, 12) * 100%);
     max-width: calc(4 / var(--ion-grid-columns, 12) * 100%);
+}
+.col-s5 {
+    flex: 0 0 calc(5 / var(--ion-grid-columns, 12) * 100%);
+    width: calc(5 / var(--ion-grid-columns, 12) * 100%);
+    max-width: calc(5 / var(--ion-grid-columns, 12) * 100%);
+}
+.col-s3 {
+    flex: 0 0 calc(3 / var(--ion-grid-columns, 12) * 100%);
+    width: calc(3 / var(--ion-grid-columns, 12) * 100%);
+    max-width: calc(3 / var(--ion-grid-columns, 12) * 100%);
+}
+.con {
     div {
         position: relative;
         .bad {

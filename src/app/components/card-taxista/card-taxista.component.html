@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="row-card pt20">
-        <div class="col-s4 l" (click)="likeClick()">
+        <div class="col-s4 l con" (click)="likeClick()">
             <div>
                 <div class="bad">
                     <label *ngIf="taxista.positivos > 99">+99</label>
@@ -25,7 +25,7 @@
             </div>
             <h6 [ngClass]="{'red': taxista.GoodComment, 'black': !taxista.GoodComment}">{{'LIKE' | translate}}</h6>
         </div>
-        <div class="col-s4 c" (click)="disLikeClick()">
+        <div class="col-s5 c con" (click)="disLikeClick()">
             <div>
                 <div class="bad">
                     <label *ngIf="taxista.negativos > 99">99</label>
@@ -36,7 +36,7 @@
             </div>
             <h6 [ngClass]="{'red': taxista.BadComment, 'black': !taxista.BadComment}">{{'DISLIKE' | translate}}</h6>
         </div>
-        <div class="col-s4 e" (click)="shared()">
+        <div class="col-s3 e con" (click)="shared()">
             <img [src]="'assets/new/taxista/shared.png'" class="img1">
             <h6>{{'COMPARTIR' | translate}}</h6>
         </div>

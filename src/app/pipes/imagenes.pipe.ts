@@ -7,7 +7,8 @@ export class ImagenesPipe implements PipeTransform {
 
   transform(img: string): any {
     if (!img) {
-      return'assets/new/no-image.jpg';
+      // return'assets/new/no-image.jpg';
+      return'assets/new/7002.jpeg';
     }
 
     if (img.indexOf('https') >= 0) {

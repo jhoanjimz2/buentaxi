@@ -35,7 +35,7 @@ export class CalificarService extends ConexionService {
   //   });
   // } 
   getOpLikes() {
-    let params = { negative: 0, language: 'ES' }
+    let params = { negative: 0, language: localStorage.getItem('lenguaje')!.toString().toUpperCase() }
     return this.http.get<OpcionCalificar[]>(`${environment.api}/getCommentsByType`, { headers: this.headers, params  })
     .subscribe({
       next: (data: OpcionCalificar[]) => {
@@ -44,7 +44,7 @@ export class CalificarService extends ConexionService {
     })
   }
   getOpDisLikes() {
-    let params = { negative: 1, language: 'ES' }
+    let params = { negative: 1, language: localStorage.getItem('lenguaje')!.toString().toUpperCase() }
     return this.http.get<OpcionCalificar[]>(`${environment.api}/getCommentsByType`, { headers: this.headers, params })
     .subscribe({
       next: (data: OpcionCalificar[]) => {
