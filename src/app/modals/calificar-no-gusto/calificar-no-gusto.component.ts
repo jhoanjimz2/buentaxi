@@ -20,7 +20,6 @@ export class CalificarNoGustoComponent {
   calificacion: Calificacion = new Calificacion();
 
   nogusto: OpcionCalificar[] = this.calificarService.nogusto;
-  idComentario: string = this.nogusto[0].id;
 
   logInfo = async () => await Device.getInfo();
   logId = async () => await Device.getId();
@@ -57,7 +56,6 @@ export class CalificarNoGustoComponent {
     this.calificacion.telefono              = event.value.telefono;
     this.calificacion.idVinculacion         = this.idVinculacion.idVinculacion;
     this.calificacion.fechaRegistro         = new Date();
-    this.calificacion.idComentario          = this.idComentario;
     this.calificarService.addCalificacion(this.calificacion).subscribe({
       next: (data: any) => {
         if (data.estado) {
@@ -85,9 +83,6 @@ export class CalificarNoGustoComponent {
   }
   onWillDismiss(event: Event) {
     const ev = event as CustomEvent<OverlayEventDetail<string>>;
-  }
-  muestra(event: any) {
-    this.idComentario = event.detail.value;
   }
   actualizar() {
     let taxista = this.taxistas.find(element => element.idVinculacion == this.idVinculacion.idVinculacion);

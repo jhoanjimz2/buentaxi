@@ -12,21 +12,22 @@ export class ItemRadioComponent implements OnDestroy {
   @Input() index!: number;
   ngOnDestroy() {
     this.opcion.seleccionado = false;
-    // this.calificacion.idComentario = [];
+    this.calificacion.comentarios = [];
   }
   check(val: boolean) {
-    // var elementIn = document.getElementById(`in${this.index}`);
-    // var elementOut = document.getElementById(`out${this.index}`);
-    // this.opcion.seleccionado = val;
-    // if (this.opcion.seleccionado) {
-    //   elementOut!.className = 'in';
-    //   elementIn!.className = 'out';
-    //   this.calificacion.idComentario.push(this.opcion.id)
-    // } else {
-    //   elementIn!.className = 'in';
-    //   elementOut!.className = 'out';
-    //   var indice = this.calificacion.idComentario.indexOf(this.opcion.id); // obtenemos el indice
-    //   this.calificacion.idComentario.splice(indice, 1);
-    // }
+    if ( this.calificacion.comentarios.length == 3 && val == true ) return;
+    var elementIn = document.getElementById(`in${this.index}`);
+    var elementOut = document.getElementById(`out${this.index}`);
+    this.opcion.seleccionado = val;
+    if (this.opcion.seleccionado) {
+      elementOut!.className = 'in';
+      elementIn!.className = 'out';
+      this.calificacion.comentarios.push(this.opcion.id)
+    } else {
+      elementIn!.className = 'in';
+      elementOut!.className = 'out';
+      var indice = this.calificacion.comentarios.indexOf(this.opcion.id);
+      this.calificacion.comentarios.splice(indice, 1);
+    }
   }
 }

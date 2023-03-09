@@ -1,8 +1,8 @@
-<div class="card-taxista">
+<div class="card-taxista animate__animated animate__backInDown">
     <img [src]="'assets/new/taxista/star.png'" class="img-star">
     <div class="row-card">
         <div class="col-img">
-            <img [src]="''| imagenes">
+            <img [src]=" img + taxista.fotoURL| imagenes">
         </div>
         <div class="col-text">
             <h1>{{taxista.nombres}}</h1>

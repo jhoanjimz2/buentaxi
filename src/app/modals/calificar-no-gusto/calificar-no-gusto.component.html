@@ -9,18 +9,12 @@
 
     <ion-content class="ion-padding">
 
-      <!-- <app-item-radio
+      <app-item-radio
         *ngFor="let opcion of nogusto; let i = index"
         [index]="i"
         [calificacion]="calificacion"
         [opcion]="opcion">
-      </app-item-radio> -->
-      <ion-radio-group [value]="idComentario" mode="md" (ionChange)="muestra($event)">
-        <ion-item *ngFor="let opcion of nogusto; let i = index" lines="none">
-          <ion-radio slot="start" [value]="opcion.id"></ion-radio>
-          <ion-label>{{opcion.comentario}}</ion-label>
-        </ion-item>
-      </ion-radio-group>
+      </app-item-radio>
       
       <app-form-calificar
         [calificacion]="calificacion"

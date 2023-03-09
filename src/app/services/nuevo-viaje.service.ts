@@ -24,12 +24,5 @@ export class NuevoViajeService  extends ConexionService {
       })
     );
   }
-  // verificarPlaca(myDevice: MyDevice){
-  //   return this.http.get<PerfilTaxista[]>(`${environment.apiLocal}perfil_prueba.json`).pipe(
-  //     map((data:PerfilTaxista[]) => {
-  //       return data;
-  //     })
-  //   );
-  // }
 
 }

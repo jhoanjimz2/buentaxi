@@ -14,12 +14,12 @@
         <div class="div-info-taxi">
           <label class=label1>{{'VOYENELTAXI' | translate}}</label>
           <label class=label2>{{taxista.marca}} {{taxista.modelo}}</label>
-          <label class=label2>{{taxista.placa}}</label>
+          <label class=label2>{{taxista.placa.trim()}}</label>
         </div>
   
         <div class="div-info-taxista">
           <div class="wi80">
-            <img [src]="''| imagenes">
+            <img [src]=" imgdata | imagenes">
           </div>
           <div class="wi100">
             <label class=label1>{{'AFILIADOA'| translate}}</label>

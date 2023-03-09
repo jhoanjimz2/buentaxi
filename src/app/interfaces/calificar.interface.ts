@@ -7,7 +7,7 @@ export interface OpcionCalificar {
 
 export class Calificacion {
     buenServicio: number;
-    idComentario: string;
+    comentarios: string[];
     idVinculacion: number;
     recomienda: boolean;
     idDispositivo: '';
@@ -25,7 +25,7 @@ export class Calificacion {
     token: string;
     constructor() {
         this.buenServicio = 1;
-        this.idComentario = '';
+        this.comentarios = [];
         this.idVinculacion = 0;
         this.recomienda = false;
         this.idDispositivo = ''

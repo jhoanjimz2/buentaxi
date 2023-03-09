@@ -34,8 +34,8 @@ export class AppComponent {
       this.router.navigate(["/pages/tabs/nuevo-viaje"]);
       await SplashScreen.show({ showDuration: 3000, autoHide: true });
       this.cargarServicios();
-      Network.addListener('networkStatusChange', status => {
-        if (status.connected) this.net();
+      Network.addListener('networkStatusChange', ({connected}) => {
+        if (connected) this.net();
         else if (this.alertsService.net) this.noNet();
       });
     });
@@ -50,6 +50,7 @@ export class AppComponent {
   }
   back() {
     this.platform.backButton.subscribeWithPriority(10,() => {
+      this.alertsService.finishLoading();
       if (this.modalService.modalCompartir) this.modalService.modalCompartir = false;
       else if (this.modalService.modalLike) this.modalService.modalLike = false;
       else if (this.modalService.modalDisLike) this.modalService.modalDisLike = false;

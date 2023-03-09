@@ -21,7 +21,6 @@ export class CalificarGustoComponent {
   recomend: boolean = false;
 
   gusto: OpcionCalificar[] = this.calificarService.gusto;
-  idComentario: string = this.gusto[0].id;
 
   logInfo = async () => await Device.getInfo();
   logId = async () => await Device.getId();
@@ -51,12 +50,14 @@ export class CalificarGustoComponent {
     this.modalsService.modalLike = false;
   }
 
-  confirm() {
+  confirm(event: any) {
     this.alertsService.initLoading();
-    this.calificacion.buenServicio  = 1;
-    this.calificacion.idVinculacion = this.idVinculacion.idVinculacion;
-    this.calificacion.fechaRegistro = new Date();
-    this.calificacion.idComentario  = this.idComentario;
+    this.calificacion.correoTelefonoUsuario = event.value.email;
+    this.calificacion.nombre                = event.value.nombre;
+    this.calificacion.telefono              = event.value.telefono;
+    this.calificacion.buenServicio          = 1;
+    this.calificacion.idVinculacion         = this.idVinculacion.idVinculacion;
+    this.calificacion.fechaRegistro         = new Date();
     this.calificarService.addCalificacion(this.calificacion).subscribe({
       next: (data: any) => {
         if (data.estado) {
@@ -84,10 +85,8 @@ export class CalificarGustoComponent {
   }
 
   onWillDismiss(event: Event) {
+    this.recomend = false;
     const ev = event as CustomEvent<OverlayEventDetail<string>>;
-  }
-  muestra(event: any) {
-    this.idComentario = event.detail.value;
   }
   actualizar() {
     let taxista = this.taxistas.find(element => element.idVinculacion == this.idVinculacion.idVinculacion);

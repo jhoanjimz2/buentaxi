@@ -34,7 +34,7 @@
   <label>{{'ESTECAMPOREQUIRED' | translate}}</label>
 
   <button 
-    [disabled]="!formulario.valid"
+    [disabled]="!formulario.valid || calificacion.comentarios.length < 1"
     type="submit" 
     class="botonAmarillo">
     {{'ENVIAR' | translate}}

@@ -20,20 +20,6 @@ export class CalificarService extends ConexionService {
 
   constructor( private http: HttpClient ) { super(http); }
   getOpcionesCalificar() { this.getOpLikes(); this.getOpDisLikes(); }
-  // getOpcionesCalificar() {
-  //   return this.http.get(`${environment.apiLocal}calificar.json`).subscribe((data: any) => {
-  //     if (localStorage.getItem('lenguaje') == 'en') {
-  //       this.gusto = data.en.gusto;
-  //       this.nogusto = data.en.nogusto;
-  //     } else if(localStorage.getItem('lenguaje') == 'es') {
-  //       this.gusto = data.es.gusto;
-  //       this.nogusto = data.es.nogusto;
-  //     } else if(localStorage.getItem('lenguaje') == 'fr') {
-  //       this.gusto = data.fr.gusto;
-  //       this.nogusto = data.fr.nogusto;
-  //     }
-  //   });
-  // } 
   getOpLikes() {
     let params = { negative: 0, language: localStorage.getItem('lenguaje')!.toString().toUpperCase() }
     return this.http.get<OpcionCalificar[]>(`${environment.api}/getCommentsByType`, { headers: this.headers, params  })
@@ -54,6 +40,14 @@ export class CalificarService extends ConexionService {
   }
   addCalificacion(calificacion: Calificacion){
     return this.http.post(`${environment.api}/addComment`, calificacion, { headers: this.headers }).pipe(
+      map((data: any) => {
+        return data;
+      })
+    );
+  }
+  img(id:number){
+    return this.http.get(`https://api.sictaxi.gov.co/api/getImgDriver/${id}`, { headers: this.headers })
+    .pipe(
       map((data: any) => {
         return data;
       })

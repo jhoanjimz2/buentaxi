@@ -6,6 +6,7 @@ import * as htmlToImage from 'html-to-image';
 import { AlertsService } from '../../services/alerts.service';
 import { SocialSharing } from '@awesome-cordova-plugins/social-sharing/ngx';
 import { TranslateService } from '@ngx-translate/core';
+import { CalificarService } from '../../services/calificar.service';
 
 
 
@@ -16,20 +17,39 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class CompartirComponent implements OnChanges {
   @Input() taxista!: PerfilTaxista;
+  imgdata: string = '';
 
   constructor( 
     public modalsService: ModalsService,
     private alertsService: AlertsService,
     private socialSharing: SocialSharing,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private calificarService: CalificarService
   ) { }
   ngOnChanges() { 
-    if(this.taxista) setTimeout(() => this.convertir(), 2000)
+    if(this.taxista) this.cargarImg();
   }
   onWillDismiss(event: Event) {
     const ev = event as CustomEvent<OverlayEventDetail<string>>;
   }
-
+  cargarImg() {
+    this.calificarService.img(this.taxista.id)
+    .subscribe
+      ({ 
+        next: (data: any) => { 
+          this.imgdata = data!.imagen;
+          setTimeout(() => {
+            this.convertir();
+          }, 2000)
+        }, error: () => {
+          this.alertsService.finishLoading();
+          let msg = '';
+          this.translate.get('TUSOLICITUDERROR').subscribe(value => { msg = value; });
+          this.alertsService.toastAlert(msg);
+          this.modalsService.modalCompartir = false;
+        }
+      });
+  }
   convertir() {
     let html = document.getElementById('compartirHtml');
     htmlToImage.toPng(html!).then((url: string) => {

@@ -10,19 +10,13 @@
     
     <ion-content class="ion-padding">
       
-      <!-- <app-item-radio
+      <app-item-radio
         *ngFor="let opcion of gusto; let i = index"
         [index]="i"
         [calificacion]="calificacion"
         [opcion]="opcion">
-      </app-item-radio> -->
-      <ion-radio-group [value]="idComentario" mode="md" (ionChange)="muestra($event)">
-        <ion-item *ngFor="let opcion of gusto; let i = index" lines="none">
-          <ion-radio slot="start" [value]="opcion.id"></ion-radio>
-          <ion-label>{{opcion.comentario}}</ion-label>
-        </ion-item>
-      </ion-radio-group>
-
+      </app-item-radio>
+      
       <button 
         [ngClass]="{'button': !recomend, 'buttonSelect': recomend}" 
         (click)="recomend = !recomend">
@@ -31,11 +25,12 @@
         <img [src]="'assets/new/taxista/starW.png'" *ngIf="recomend">
       </button>
 
-      <button
-        (click)="confirm()"
-        class="botonAmarillo">
-        {{'SIGUIENTE' | translate}}
-      </button>
+      <app-form-calificar
+        [calificacion]="calificacion"
+        (btnConfirm)="confirm($event)">
+      </app-form-calificar>
+
+
 
     </ion-content>
   </ng-template>
