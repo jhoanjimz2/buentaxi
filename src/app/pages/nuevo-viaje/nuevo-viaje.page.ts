@@ -37,7 +37,7 @@ export class NuevoViajePage {
 
   validar(event: any) {
     this.alertsService.initLoading();
-    this.myDevice.placa = event.placa.toUpperCase();
+    this.myDevice.placa = event.placa.toUpperCase().trim();
     this.nuevoViajeService.verificarPlaca(this.myDevice).subscribe({
       next: (data: PerfilTaxista[]) => {
         this.alertsService.finishLoading();
@@ -49,10 +49,11 @@ export class NuevoViajePage {
           this.translate.get('TUSOLICITUDERROR').subscribe(value => { msg = value; });
           this.alertsService.toastAlert(msg);
         }
-      }, error: (error) => {
+      }, error: (error: any) => {
         this.alertsService.finishLoading();
         let msg = '';
         this.translate.get('TUSOLICITUDERROR').subscribe(value => { msg = value; });
+        console.log(JSON.stringify(error))
         this.alertsService.toastAlert(msg);
       }
     })

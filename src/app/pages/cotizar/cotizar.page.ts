@@ -8,6 +8,7 @@ import { ModalsService } from 'src/app/services/modals.service';
 import { CotizadorService } from '../../services/cotizador.service';
 import { Options } from 'ngx-google-places-autocomplete/objects/options/options';
 import { TranslateService } from '@ngx-translate/core';
+import { poligonos } from 'src/assets/data/poligonos';
 declare var google: any;
 
 @Component({
@@ -70,6 +71,8 @@ export class CotizarPage {
 
   latLngOr: GeoLatLng = { lat: 0, lng: 0 };
   latLngDe: GeoLatLng = { lat: 0, lng: 0 };
+  
+  pM: Poligono[] = poligonos;
 
   constructor( 
     private mS: MapaService, 
@@ -81,7 +84,7 @@ export class CotizarPage {
   ) { this.geo = this.mS.geo; }
 
   async setPosition() { 
-    // await this.mS.setCoorPhone();
+    await this.mS.setCoorPhone();
     let valid =  await this.verificarPunto(this.mS.geo.lat, this.mS.geo.lng);
     if(!valid) {
       this.tr.get('POSICIONNOVALIDA').subscribe(value => { this.msgError5 = value; });
@@ -118,7 +121,7 @@ export class CotizarPage {
     this.mapa = new google.maps.Map(this.mapRef.nativeElement, options);
     this.mapa.mapTypes.set('map', customMapType);
     var element = document.getElementById("mapa");
-    await this.mS.poligonos.map((data: Poligono) => { this.pintarPoligonos(data); });
+    await this.pM.map((data: Poligono) => { this.pintarPoligonos(data); });
     google.maps.event.addListener(this.origen,'drag', async ( data: any ) => {
       element!.className = 'mapah100';
     });

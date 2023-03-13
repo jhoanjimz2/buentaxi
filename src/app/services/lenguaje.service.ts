@@ -5,15 +5,11 @@ import { TranslateService } from '@ngx-translate/core';
   providedIn: 'root'
 })
 export class LenguajeService {
-
-  constructor(
-    private translate: TranslateService
-  ) { }
-
-  public inicializarArchivos() {
+  constructor( private translate: TranslateService ) { }
+  inicializarArchivos() {
     this.translate.addLangs(['es', 'en', 'fr']);
   }
-  public setearIdiomaInicial() {
+  setearIdiomaInicial() {
     if (localStorage.getItem('lenguaje')) {
       this.translate.setDefaultLang(localStorage.getItem('lenguaje')!);
       this.translate.use(localStorage.getItem('lenguaje')!);

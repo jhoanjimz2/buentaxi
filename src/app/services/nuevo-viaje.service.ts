@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { ConexionService } from './conexion.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MyDevice, PerfilTaxista } from '../interfaces/interfaces';
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs';
@@ -8,21 +7,25 @@ import { map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class NuevoViajeService  extends ConexionService {
+export class NuevoViajeService {
 
   private _taxistas!: PerfilTaxista[];
   get taxistas(): PerfilTaxista[] { return this._taxistas; } 
   set taxistas(value: PerfilTaxista[]) { this._taxistas = value; }
 
-  constructor( private http: HttpClient ) { super(http); }
+  constructor( private http: HttpClient ) { }
 
 
   verificarPlaca(myDevice: MyDevice){
-    return this.http.post<PerfilTaxista[]>(`${environment.api}/searchVehicleByDriverPlate`, myDevice, { headers: this.headers }).pipe(
+    const headers = { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' }
+    return this.http.post<PerfilTaxista[]>(`${environment.api}/searchVehicleByDriverPlate`, myDevice, { headers }).pipe(
       map((data:PerfilTaxista[]) => {
         return data;
       })
     );
+  }
+  get lenguaje(): string {
+    return localStorage.getItem("lenguaje")!.toUpperCase() || 'ES';
   }
 
 }

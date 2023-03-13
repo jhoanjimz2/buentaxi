@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Calificacion, OpcionCalificar } from 'src/app/interfaces/interfaces';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { map } from "rxjs/operators";
-import { ConexionService } from './conexion.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CalificarService extends ConexionService {
+export class CalificarService  {
+
+  headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Content-Type': 'application/json',
+  }
 
   private _gusto!: OpcionCalificar[];
   get gusto(): OpcionCalificar[] { return this._gusto; }
@@ -18,39 +22,39 @@ export class CalificarService extends ConexionService {
   get nogusto(): OpcionCalificar[] { return this._nogusto; }
   set nogusto(value: OpcionCalificar[]) { this._nogusto = value; }
 
-  constructor( private http: HttpClient ) { super(http); }
+  constructor( 
+    private http: HttpClient
+  ) { }
+
   getOpcionesCalificar() { this.getOpLikes(); this.getOpDisLikes(); }
+
   getOpLikes() {
     let params = { negative: 0, language: localStorage.getItem('lenguaje')!.toString().toUpperCase() }
     return this.http.get<OpcionCalificar[]>(`${environment.api}/getCommentsByType`, { headers: this.headers, params  })
     .subscribe({
-      next: (data: OpcionCalificar[]) => {
-        this.gusto = data;
-      }
+      next: (data: OpcionCalificar[]) => { this.gusto = data;},
+      error: (error: any) => {}
     })
   }
+
   getOpDisLikes() {
     let params = { negative: 1, language: localStorage.getItem('lenguaje')!.toString().toUpperCase() }
     return this.http.get<OpcionCalificar[]>(`${environment.api}/getCommentsByType`, { headers: this.headers, params })
     .subscribe({
-      next: (data: OpcionCalificar[]) => {
-        this.nogusto = data;
-      }
+      next: (data: OpcionCalificar[]) => { this.nogusto = data;},
+      error: (error: any) => {}
     })
   }
+
   addCalificacion(calificacion: Calificacion){
     return this.http.post(`${environment.api}/addComment`, calificacion, { headers: this.headers }).pipe(
-      map((data: any) => {
-        return data;
-      })
+      map((data: any) => { return data; })
     );
   }
+
   img(id:number){
-    return this.http.get(`https://api.sictaxi.gov.co/api/getImgDriver/${id}`, { headers: this.headers })
-    .pipe(
-      map((data: any) => {
-        return data;
-      })
+    return this.http.get(`https://api.sictaxi.gov.co/api/getImgDriver/${id}`, { headers: this.headers }).pipe(
+      map((data: any) => { return data; })
     );
   }
 

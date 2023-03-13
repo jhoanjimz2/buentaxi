@@ -4,9 +4,7 @@
 
 export const environment = {
   production: false,
-  apiLocal: '../../assets/data/',
-  api: 'https://api.sictaxi.gov.co/api',
-  apiPrueba: 'https://apibuentaxi.somosinnlab.co/api',
+  api: 'https://apibuentaxi.somosinnlab.co/api',
   apiImg: 'https://api.sictaxi.gov.co/imagenes/conductores/'
 };
 

@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Geolocation } from '@capacitor/geolocation';
-import { GeoLatLng, Poligono } from 'src/app/interfaces/interfaces';
-import { environment } from 'src/environments/environment';
+import { GeoLatLng } from 'src/app/interfaces/interfaces';
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +12,6 @@ export class MapaService {
   private _geo!: GeoLatLng;
   get geo(): GeoLatLng { return this._geo; }
   set geo(value: GeoLatLng) { this._geo = value; }
-
-  private _poligonos!: Poligono[];
-  get poligonos(): Poligono[] { return this._poligonos; }
-  set poligonos(value: Poligono[]) { this._poligonos = value; }
   
   constructor(
     private http: HttpClient
@@ -36,14 +32,6 @@ export class MapaService {
 
   setCoorPred() {
     this.geo = { lat: 11.2315252, lng: -74.182397 };
-  }
-
-  getPoligonos() {
-    return this.http.get<Poligono[]>(`${environment.apiLocal}poligonos.json`).subscribe({
-      next: (data: Poligono[]) => {
-        this.poligonos = data;
-      }
-    });
   }
 
 }
