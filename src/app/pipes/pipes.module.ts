@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ImagenesPipe } from './imagenes.pipe';
 import { FormattNumberPipe } from './formatt-number.pipe';
 
@@ -13,9 +12,6 @@ import { FormattNumberPipe } from './formatt-number.pipe';
   exports: [
     ImagenesPipe,
     FormattNumberPipe
-  ],
-  imports: [
-    CommonModule
   ]
 })
 export class PipesModule { }

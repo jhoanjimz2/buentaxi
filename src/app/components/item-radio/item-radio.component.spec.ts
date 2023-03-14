@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { ItemRadioComponent } from './item-radio.component';
+import { Calificacion } from '../../interfaces/calificar.interface';
 
 describe('ItemRadioComponent', () => {
   let component: ItemRadioComponent;
@@ -15,6 +16,9 @@ describe('ItemRadioComponent', () => {
 
     fixture = TestBed.createComponent(ItemRadioComponent);
     component = fixture.componentInstance;
+    component.opcion = { "id": '1', "comentario": "Buen Taxi", seleccionado: false };
+    component.index = 0;
+    component.calificacion = new Calificacion();
     fixture.detectChanges();
   }));
 

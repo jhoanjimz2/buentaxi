@@ -12,11 +12,11 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { registerLocaleData } from '@angular/common';
-import localeIt from '@angular/common/locales/es';
+import localeEs from '@angular/common/locales/es';
 import { SocialSharing } from '@awesome-cordova-plugins/social-sharing/ngx';
 
 
-registerLocaleData(localeIt, 'es');
+registerLocaleData(localeEs, 'es');
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }

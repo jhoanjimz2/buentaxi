@@ -54,7 +54,7 @@ export class AppComponent {
       else if (this.alertsService.net) this.noNet();
     });
   }
-  net() { this.cargarServicios(); this.alertsService.finishLoadingN(); }
-  noNet() { this.alertsService.initLoadingN();  }
+  async net() { await this.alertsService.finishLoadingN(); }
+  async noNet() { await this.alertsService.initLoadingN(); }
 
 }

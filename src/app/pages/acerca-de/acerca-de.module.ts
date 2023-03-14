@@ -19,7 +19,6 @@ import { ComponentsModule } from '../../components/components.module';
     ComponentsModule,
     TranslateModule
   ],
-  declarations: [AcercaDePage],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  declarations: [AcercaDePage]
 })
 export class AcercaDePageModule {}

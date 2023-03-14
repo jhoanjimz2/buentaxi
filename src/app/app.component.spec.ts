@@ -2,6 +2,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('AppComponent', () => {
 
@@ -9,6 +11,10 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [AppComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      imports: [ 
+        TranslateModule.forRoot(),
+        HttpClientModule
+      ]
     }).compileComponents();
   });
 

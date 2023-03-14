@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { CalificarNoGustoComponent } from './calificar-no-gusto.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('CalificarNoGustoComponent', () => {
   let component: CalificarNoGustoComponent;
@@ -10,7 +12,11 @@ describe('CalificarNoGustoComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ CalificarNoGustoComponent ],
-      imports: [IonicModule.forRoot()]
+      imports: [
+        IonicModule.forRoot(),
+        TranslateModule.forRoot(),
+        HttpClientModule
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(CalificarNoGustoComponent);

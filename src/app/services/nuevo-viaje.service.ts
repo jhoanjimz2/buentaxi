@@ -17,7 +17,7 @@ export class NuevoViajeService {
 
 
   verificarPlaca(myDevice: MyDevice){
-    const headers = { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' }
+    const headers = { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json', 'X-localization': this.lenguaje }
     return this.http.post<PerfilTaxista[]>(`${environment.api}/searchVehicleByDriverPlate`, myDevice, { headers }).pipe(
       map((data:PerfilTaxista[]) => {
         return data;

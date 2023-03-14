@@ -1,5 +1,7 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 import { AjustesPage } from './ajustes.page';
 
@@ -10,7 +12,10 @@ describe('AjustesPage', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ AjustesPage ],
-      imports: [IonicModule.forRoot()]
+      imports: [
+        IonicModule.forRoot(),
+        ComponentsModule,
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AjustesPage);

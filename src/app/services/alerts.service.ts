@@ -75,7 +75,7 @@ export class AlertsService {
     });
     return this.loadingN.present();
   }
-  finishLoadingN() {
+  async finishLoadingN() {
     this.loadingN.dismiss();
     this.net = true;
   }

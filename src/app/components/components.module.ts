@@ -1,7 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { MapaCotizarComponent } from './mapa-cotizar/mapa-cotizar.component';
 import { PipesModule } from '../pipes/pipes.module';
 import { ItemRadioComponent } from './item-radio/item-radio.component';
 import { FormulariosModule } from '../forms/formularios.module';
@@ -20,7 +19,6 @@ import { ItemTarifaCarComponent } from './item-tarifa-car/item-tarifa-car.compon
 
 @NgModule({
   declarations: [
-    MapaCotizarComponent,
     ItemRadioComponent,
     EncabezadoComponent,
     HeaderComponent,
@@ -33,7 +31,6 @@ import { ItemTarifaCarComponent } from './item-tarifa-car/item-tarifa-car.compon
     ItemTarifaCarComponent
   ],
   exports: [
-    MapaCotizarComponent,
     ItemRadioComponent,
     EncabezadoComponent,
     HeaderComponent,

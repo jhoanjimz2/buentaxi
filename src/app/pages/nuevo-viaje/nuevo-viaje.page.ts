@@ -53,7 +53,6 @@ export class NuevoViajePage {
         this.alertsService.finishLoading();
         let msg = '';
         this.translate.get('TUSOLICITUDERROR').subscribe(value => { msg = value; });
-        console.log(JSON.stringify(error))
         this.alertsService.toastAlert(msg);
       }
     })
