@@ -17,7 +17,6 @@ export class MapaService {
     private http: HttpClient
   ) {
     this.setCoorPred();
-    this.setCoorPhone();
   }
 
   async setCoorPhone() {
@@ -32,6 +31,7 @@ export class MapaService {
 
   setCoorPred() {
     this.geo = { lat: 11.2315252, lng: -74.182397 };
+    this.setCoorPhone();
   }
 
 }

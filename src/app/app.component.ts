@@ -28,10 +28,10 @@ export class AppComponent {
   }
   async initializeApp() {
     await SplashScreen.show({ showDuration: 3000, autoHide: true });
+    this.router.navigate(["/pages/tabs/nuevo-viaje"]);
     this.cargarServicios();
     this.internet();
     this.back();
-    this.router.navigate(["/pages/tabs/nuevo-viaje"]);
   }
   back() {
     this.platform.backButton.subscribeWithPriority(10,() => {
