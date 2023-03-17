@@ -14,6 +14,7 @@ import { ItemRadioCotizadorComponent } from './item-radio-cotizador/item-radio-c
 import { BarraColoresTabsComponent } from './barra-colores-tabs/barra-colores-tabs.component';
 import { ItemTarifaComponent } from './item-tarifa/item-tarifa.component';
 import { ItemTarifaCarComponent } from './item-tarifa-car/item-tarifa-car.component';
+import { ItemTarifaBanderazoComponent } from './item-tarifa-banderazo/item-tarifa-banderazo.component';
 
 
 
@@ -28,7 +29,8 @@ import { ItemTarifaCarComponent } from './item-tarifa-car/item-tarifa-car.compon
     ItemRadioCotizadorComponent,
     BarraColoresTabsComponent,
     ItemTarifaComponent,
-    ItemTarifaCarComponent
+    ItemTarifaCarComponent,
+    ItemTarifaBanderazoComponent
   ],
   exports: [
     ItemRadioComponent,
@@ -40,7 +42,8 @@ import { ItemTarifaCarComponent } from './item-tarifa-car/item-tarifa-car.compon
     ItemRadioCotizadorComponent,
     BarraColoresTabsComponent,
     ItemTarifaComponent,
-    ItemTarifaCarComponent
+    ItemTarifaCarComponent,
+    ItemTarifaBanderazoComponent
   ],
   imports: [
     CommonModule,

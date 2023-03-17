@@ -1,9 +1,9 @@
 <div class="item-conten">
   <div class="slot-img">
-    <img [src]="'assets/new/cotizador/'+tarifa.icono">
+    <img [src]="'assets/new/cotizador/'+tarifa.icono | imagenes">
   </div>
   <div class="slot-comentario">
-    {{tarifa.comentario | translate}}
+    {{tarifa.comentario | translate}} <span>{{tarifa.span | translate}}</span>
   </div>
   <div class="slot-precio">
     ${{tarifa.precio | formattNumber}}

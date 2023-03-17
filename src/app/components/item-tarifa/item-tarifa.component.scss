@@ -1,8 +1,8 @@
 .item-conten {
     width: 100%;
     display: flex;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .slot-img {
     width: 25px;
@@ -22,6 +22,10 @@
     color: black;
     font-size: 13px;
     padding-left: 20px;
+    padding-right: 20px;
+    span {
+        font-size: 10px;
+    }
 }
 .slot-precio {
     width: 50px;
