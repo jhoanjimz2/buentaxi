@@ -2,7 +2,7 @@
     width: 100%;
     text-align: center;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     label {
         font-size: 16px;
         font-weight: 400;
@@ -77,8 +77,8 @@
 .div-stores {
     width: 100%;
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     label {
         font-size: 16px;
         font-weight: 400;
@@ -102,27 +102,23 @@
         }
     }
 }
-
-.div-footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 50px;
-    app-barra-colores-tabs {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .labelc {
-        color: grey;
-        font-size: 8px;
-        font-weight: 500;
-    }
-    .imgLogo {
-        width: 100px;
-    }
-}
 #compartirHtml {
     background-color: white;
+}
+.separador {
+    width: 100%;
+    height: 10px;
+}
+app-barra-colores-tabs {
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.labelc {
+    color: grey;
+    font-size: 8px;
+    font-weight: 500;
+}
+.imgLogo {
+    width: 100px;
 }

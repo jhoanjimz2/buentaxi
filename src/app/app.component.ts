@@ -27,9 +27,9 @@ export class AppComponent {
     this.initializeApp();
   }
   async initializeApp() {
-    await SplashScreen.show({ showDuration: 3000, autoHide: true });
-    this.router.navigate(["/pages/tabs/nuevo-viaje"]);
     this.cargarServicios();
+    await SplashScreen.show({ showDuration: 3500, autoHide: true });
+    this.router.navigate(["/pages/tabs/nuevo-viaje"]);
     this.internet();
     this.back();
   }
