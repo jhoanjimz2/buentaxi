@@ -77,5 +77,7 @@
     "TUSOLICITUD":"Votre demande est en cours de traitement, merci beaucoup d'utiliser nos services.",
     "TUSOLICITUDERROR":"Une erreur s'est produite dans le traitement de votre demande, veuillez réessayer.",
     "RECARGOZONASTERMINAL":"Surtaxe pour départ du terminal",
-    "RECARGOZONASAEROPUERTO":"Surtaxe pour le départ de l'aéroport"
+    "RECARGOZONASAEROPUERTO":"Surtaxe pour le départ de l'aéroport",
+    "201":"Erreur de taper de la plaque ou plaque non enregistrée",
+    "202":"Plaque avec un conducteur sans autorisation d'opérer."
 }

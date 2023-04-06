@@ -7,6 +7,7 @@ import { NavController, Platform } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { CalificarService } from './services/calificar.service';
 import { SplashScreen } from '@capacitor/splash-screen';
+import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/ngx';
 
 
 @Component({
@@ -22,12 +23,14 @@ export class AppComponent {
     private modalService: ModalsService,
     private navCtrl: NavController,
     private router: Router,
-    private calificarService: CalificarService
+    private calificarService: CalificarService,
+    private screenOrientation: ScreenOrientation
   ) {
     this.initializeApp();
   }
   async initializeApp() {
     this.cargarServicios();
+    this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
     await SplashScreen.show({ showDuration: 3500, autoHide: true });
     this.router.navigate(["/pages/tabs/nuevo-viaje"]);
     this.internet();

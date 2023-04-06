@@ -77,5 +77,7 @@
     "TUSOLICITUD":"Tu solicitud está siendo procesada, muchas gracias por usar nuestros servicios",
     "TUSOLICITUDERROR":"Hubo un error al momento de procesar tu solicitud, inténtalo de nuevo",
     "RECARGOZONASTERMINAL":"Recargo salida de la terminal",
-    "RECARGOZONASAEROPUERTO":"Recargo salida del aeropuerto"
+    "RECARGOZONASAEROPUERTO":"Recargo salida del aeropuerto",
+    "201":"Error al digitar la placa o placa no registrada",
+    "202":"Placa sin conductores con permiso para operar"
 }

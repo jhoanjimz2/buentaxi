@@ -14,6 +14,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 import { SocialSharing } from '@awesome-cordova-plugins/social-sharing/ngx';
+import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/ngx';
 
 
 registerLocaleData(localeEs, 'es');
@@ -35,7 +36,8 @@ export function createTranslateLoader(http: HttpClient) {
       provide: RouteReuseStrategy, 
       useClass: IonicRouteStrategy 
     },
-    SocialSharing
+    SocialSharing,
+    ScreenOrientation
   ],
   bootstrap: [ AppComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

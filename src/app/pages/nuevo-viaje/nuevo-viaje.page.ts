@@ -39,14 +39,15 @@ export class NuevoViajePage {
     this.alertsService.initLoading();
     this.myDevice.placa = event.placa.toUpperCase().trim();
     this.nuevoViajeService.verificarPlaca(this.myDevice).subscribe({
-      next: (data: PerfilTaxista[]) => {
+      next: (data: PerfilTaxista[] | any) => {
         this.alertsService.finishLoading();
         if (data.length) {
           this.nuevoViajeService.taxistas = data;
           this.navController.navigateForward('/pages/perfil-taxi');
         } else {
           let msg = '';
-          this.translate.get('TUSOLICITUDERROR').subscribe(value => { msg = value; });
+          if (data.codigo == '202') this.translate.get('202').subscribe(value => { msg = value; });
+          else this.translate.get('201').subscribe(value => { msg = value; });
           this.alertsService.toastAlert(msg);
         }
       }, error: (error: any) => {

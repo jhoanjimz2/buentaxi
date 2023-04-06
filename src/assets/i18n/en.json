@@ -77,5 +77,7 @@
     "TUSOLICITUD":"Your request is being processed, thank you very much for using our services.",
     "TUSOLICITUDERROR":"There was an error processing your request, please try again.",
     "RECARGOZONASTERMINAL":"Surcharge terminal departure",
-    "RECARGOZONASAEROPUERTO":"Airport departure surcharge"
+    "RECARGOZONASAEROPUERTO":"Airport departure surcharge",
+    "201":"Typing error on license plate or unregistered license plate",
+    "202":"License plate with a driver without permission to operate"
 }
